@@ -1,0 +1,17 @@
+{
+  "tailwindCSS.includeLanguages": {
+    "typescript": "typescript",
+    "typescriptreact": "typescriptreact"
+  },
+  "tailwindCSS.experimental.classRegex": [
+    ["tv\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"],
+    ["cn\\(([^)]*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)"]
+  ],
+  "tailwindCSS.classAttributes": ["class", "className", "ngClass"],
+  "editor.quickSuggestions": {
+    "strings": true
+  },
+  "files.associations": {
+    "tw-*.*css": "tailwindcss"
+  }
+}
