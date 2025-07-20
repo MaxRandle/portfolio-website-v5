@@ -1,11 +1,12 @@
+import React, { forwardRef, JSX } from "react";
 import { tv, type VariantProps } from "tailwind-variants";
-import React from "react";
 
-const sectionVariants = tv({
+const SectionStyles = tv({
   base: "",
   variants: {
     /**
      * @summary determines the vertical separation between two adjacent sections
+     * @default "md"
      */
     spacing: {
       md: "my-20 sm:my-36 py-20 sm:py-36",
@@ -13,15 +14,12 @@ const sectionVariants = tv({
     },
     /**
      * @summary specifies the background color
+     * @default "transparent"
      */
     palette: {
       transparent: ["py-0 sm:py-0"],
-      surface: ["my-0 sm:my-0", "bg-base-300 dark-context:bg-base-1200"],
-      primary: [
-        "my-0 sm:my-0",
-        "bg-primary-900 dark-context:bg-primary-1100",
-        "dark",
-      ],
+      surface: ["my-0 sm:my-0", "bg-base-300 dark:bg-base-1200"],
+      primary: ["my-0 sm:my-0", "bg-primary-900 dark:bg-primary-1100", "dark"],
     },
   },
   defaultVariants: {
@@ -30,20 +28,20 @@ const sectionVariants = tv({
   },
 });
 
-export type SectionProps = React.ComponentPropsWithoutRef<"section"> &
-  VariantProps<typeof sectionVariants>;
+type SectionVariants = VariantProps<typeof SectionStyles>;
 
-export const Section = React.forwardRef<
-  React.ComponentRef<"section">,
-  SectionProps
->(({ className, palette, spacing, ...props }, ref) => {
-  return (
-    <section
-      ref={ref}
-      className={sectionVariants({ spacing, palette, className })}
-      {...props}
-    />
-  );
-});
+export type SectionProps = JSX.IntrinsicElements["section"] & SectionVariants;
+
+export const Section = forwardRef<HTMLElement, SectionProps>(
+  ({ className, palette, spacing, ...props }, ref) => {
+    return (
+      <section
+        ref={ref}
+        className={SectionStyles({ spacing, palette, className })}
+        {...props}
+      />
+    );
+  }
+);
 
 Section.displayName = "Section";

@@ -1,3 +1,4 @@
+import { forwardRef, JSX } from "react";
 import { tv, type VariantProps } from "tailwind-variants";
 
 import {
@@ -7,7 +8,7 @@ import {
   BsCheckSquare,
 } from "react-icons/bs";
 
-const alertVariants = tv({
+const AlertStyles = tv({
   base: "rounded-xl border-2 p-6 flex flex-col gap-3",
   variants: {
     status: {
@@ -31,37 +32,37 @@ const alertVariants = tv({
   },
 });
 
-export type AlertProps = React.ComponentPropsWithoutRef<"div"> &
-  Omit<VariantProps<typeof alertVariants>, "status"> &
-  Required<Pick<VariantProps<typeof alertVariants>, "status">> & {
+type AlertVariants = VariantProps<typeof AlertStyles>;
+
+export type AlertProps = JSX.IntrinsicElements["div"] &
+  Omit<AlertVariants, "status"> &
+  Required<Pick<AlertVariants, "status">> & {
     title: React.ReactNode;
   };
 
-export const Alert: React.FC<AlertProps> = ({
-  className,
-  children,
-  title,
-  status,
-  ...props
-}) => {
-  const Icon =
-    status === "danger"
-      ? BsXOctagon
-      : status === "warning"
-        ? BsExclamationTriangle
-        : status === "info"
-          ? BsInfoCircle
-          : BsCheckSquare;
+export const Alert = forwardRef<HTMLDivElement, AlertProps>(
+  ({ className, children, title, status, ...props }, ref) => {
+    const Icon =
+      status === "danger"
+        ? BsXOctagon
+        : status === "warning"
+          ? BsExclamationTriangle
+          : status === "info"
+            ? BsInfoCircle
+            : BsCheckSquare;
 
-  return (
-    <div className={alertVariants({ status, className })} {...props}>
-      <div className="flex items-center gap-4">
-        <p>
-          <Icon size={24} />
-        </p>
-        <p className="text-lg">{title}</p>
+    return (
+      <div ref={ref} className={AlertStyles({ status, className })} {...props}>
+        <div className="flex items-center gap-4">
+          <p>
+            <Icon size={24} />
+          </p>
+          <p className="text-lg">{title}</p>
+        </div>
+        <div>{children}</div>
       </div>
-      <div>{children}</div>
-    </div>
-  );
-};
+    );
+  }
+);
+
+Alert.displayName = "Alert";
