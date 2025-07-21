@@ -1,18 +1,21 @@
-import { twMerge } from "tailwind-merge";
+import React, { forwardRef, JSX } from "react";
+import { tv, type VariantProps } from "tailwind-variants";
 
-type ButtonGroupProps = React.ComponentPropsWithoutRef<"div">;
+const ButtonGroupStyles = tv({
+  base: "group/button-group inline-flex -space-x-px rounded-full shadow-sm",
+});
 
-export const ButtonGroup: React.FC<ButtonGroupProps> = ({
-  className,
-  ...props
-}) => {
-  return (
-    <div
-      className={twMerge(
-        "group/button-group inline-flex -space-x-px rounded-full shadow-sm",
-        className
-      )}
-      {...props}
-    />
-  );
-};
+type ButtonGroupVariants = VariantProps<typeof ButtonGroupStyles>;
+
+export type ButtonGroupProps = JSX.IntrinsicElements["div"] &
+  ButtonGroupVariants;
+
+export const ButtonGroup = forwardRef<HTMLDivElement, ButtonGroupProps>(
+  ({ className, ...props }, ref) => {
+    return (
+      <div ref={ref} className={ButtonGroupStyles({ className })} {...props} />
+    );
+  }
+);
+
+ButtonGroup.displayName = "ButtonGroup";

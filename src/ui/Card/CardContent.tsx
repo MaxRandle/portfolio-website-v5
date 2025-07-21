@@ -1,12 +1,21 @@
-import { twMerge } from "tailwind-merge";
+import React, { forwardRef, JSX } from "react";
+import { tv, type VariantProps } from "tailwind-variants";
 
-export type CardContentProps = React.ComponentPropsWithoutRef<"div">;
+const CardContentStyles = tv({
+  base: "p-6",
+});
 
-export const CardContent: React.FC<CardContentProps> = ({
-  className,
-  ...props
-}) => {
-  const classes = "p-6";
+type CardContentVariants = VariantProps<typeof CardContentStyles>;
 
-  return <div className={twMerge(classes, className)} {...props} />;
-};
+export type CardContentProps = JSX.IntrinsicElements["div"] &
+  CardContentVariants;
+
+export const CardContent = forwardRef<HTMLDivElement, CardContentProps>(
+  ({ className, ...props }, ref) => {
+    return (
+      <div ref={ref} className={CardContentStyles({ className })} {...props} />
+    );
+  }
+);
+
+CardContent.displayName = "CardContent";
