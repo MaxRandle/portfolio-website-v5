@@ -13,5 +13,6 @@
   },
   "files.associations": {
     "tw-*.*css": "tailwindcss"
-  }
+  },
+  "tailwindCSS.experimental.configFile": "src/tw-theme.scss"
 }

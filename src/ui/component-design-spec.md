@@ -14,7 +14,7 @@ src/ui/
 │   ├── ComponentName.tsx          # Main component file
 │   ├── ComponentSubComponent.tsx  # Related sub-components (if any)
 │   └── index.tsx                  # Export barrel file
-└── COMPONENT_STANDARDS.md         # This documentation
+└── component-design-spec.md       # This documentation
 ```
 
 ### Naming Conventions
