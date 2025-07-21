@@ -4,7 +4,14 @@ import NextLink from "next/link";
 
 const ButtonStyles = tv({
   base: [
-    "focus:ring-active",
+    "focus:outline-none",
+    "focus:ring-4",
+    "focus:border",
+    "focus:ring-primary-400",
+    "focus:border-primary-700",
+    "focus:dark:ring-primary-900",
+    "focus:dark:border-primary-300",
+
     "font-semibold tracking-wider border rounded-full shadow-sm inline-flex items-center justify-center gap-4 transition-colors",
     "group-[&]/button-group:px-4",
     "group-[&]/button-group:rounded-none",
@@ -24,7 +31,8 @@ const ButtonStyles = tv({
     intent: {
       primary: [
         "text-white",
-        "focus:border-white",
+        "focus:border-primary-900",
+        "focus:dark:border-primary-300",
         "bg-primary-800 hover:bg-primary-700",
         "border-primary-800 hover:border-primary-700",
       ],
@@ -37,10 +45,14 @@ const ButtonStyles = tv({
         "dark:hover:bg-base-1100 dark:hover:border-base-800",
       ],
       destructive: [
+        "focus:ring-danger-400",
+        "focus:border-danger-900",
+        "focus:dark:ring-danger-900",
+        "focus:dark:border-danger-300",
+
         "text-white",
-        "focus:ring-danger",
-        "focus:border-white",
         "bg-danger-800 hover:bg-danger-700",
+
         "border-danger-800 hover:border-danger-700",
       ],
     },

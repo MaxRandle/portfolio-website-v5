@@ -4,7 +4,12 @@ import { Badge } from "@ui/Badge";
 import { Button, ButtonGroup } from "@ui/Button";
 import { Card, CardContent } from "@ui/Card";
 import { Container } from "@ui/Container";
+import { Divider } from "@ui/Divider";
+import { Heading } from "@ui/Heading";
+import { Input, InputAdornment, InputGroup } from "@ui/Input";
+import { Nav, NavLink } from "@ui/Nav";
 import { Section } from "@ui/Section";
+import { Typography } from "@ui/Typography";
 import { FiArrowLeft, FiArrowRight, FiPlus } from "react-icons/fi";
 
 export default function Home() {
@@ -90,15 +95,82 @@ export default function Home() {
                 <AvatarContainer>
                   <Avatar src="/media/avatar-1.svg" fallback="CF" />
                   <div>
-                    {/* <Heading level="h3">Cat Catterson</Heading> */}
-                    {/* <Typography level="body" palette="weaker"> */}
-                    {/* Head of CATering */}
-                    {/* </Typography> */}
+                    <Heading level="h3">Cat Catterson</Heading>
+                    <Typography level="body" palette="weaker">
+                      Head of CATering
+                    </Typography>
                   </div>
                 </AvatarContainer>
               </CardContent>
             </Card>
           ))}
+        </Container>
+      </Section>
+
+      <Section>
+        <Container>
+          <Divider />
+        </Container>
+      </Section>
+
+      <Section>
+        <Container className="space-y-4">
+          <Heading level="h1">Heading Level 1</Heading>
+          <Heading level="h2">Heading Level 2</Heading>
+          <Heading level="h3">Heading Level 3</Heading>
+
+          <Heading level="h2" palette="base">
+            Base Heading
+          </Heading>
+          <Heading level="h2" palette="weak">
+            Weak Heading
+          </Heading>
+          <Heading level="h2" palette="weaker">
+            Weaker Heading
+          </Heading>
+          <Heading level="h2" palette="primary">
+            Primary Heading
+          </Heading>
+        </Container>
+      </Section>
+
+      <Section>
+        <Container className="grid grid-cols-1 flex-col gap-4 sm:grid-cols-2">
+          <Input placeholder="example@email.com" />
+          <Input defaultValue="abc" pattern="[0-9]*" />
+          <Input disabled value="N/A" />
+          <InputGroup>
+            <InputAdornment>https://</InputAdornment>
+            <Input placeholder="maxrandle.co.nz" />
+          </InputGroup>
+          <InputGroup className="sm:col-span-2">
+            <Input />
+            <InputAdornment>to</InputAdornment>
+            <Input />
+          </InputGroup>
+          <InputGroup>
+            <InputAdornment>$</InputAdornment>
+            <Input />
+          </InputGroup>
+          <InputGroup>
+            <Input />
+            <InputAdornment>kg</InputAdornment>
+          </InputGroup>
+        </Container>
+      </Section>
+
+      <Section>
+        <Container>
+          <Nav className="rounded-lg">
+            <div className="flex space-x-4 px-4">
+              <NavLink href="/" isActive={true}>
+                Home
+              </NavLink>
+              <NavLink href="/about">About</NavLink>
+              <NavLink href="/services">Services</NavLink>
+              <NavLink href="/contact">Contact</NavLink>
+            </div>
+          </Nav>
         </Container>
       </Section>
     </main>

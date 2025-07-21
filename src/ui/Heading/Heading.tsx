@@ -17,7 +17,7 @@ const HeadingStyles = tv({
     },
     /**
      * @summary specifies the size of the text.
-     * @default "body"
+     * @default "h3"
      */
     level: {
       h1: "text-5xl sm:text-6xl font-light tracking-tight",
@@ -33,9 +33,7 @@ const HeadingStyles = tv({
 
 type HeadingVariants = VariantProps<typeof HeadingStyles>;
 
-export type HeadingProps = JSX.IntrinsicElements["h1"] &
-  JSX.IntrinsicElements["h2"] &
-  JSX.IntrinsicElements["h3"] &
+export type HeadingProps = JSX.IntrinsicElements["h1" | "h2" | "h3"] &
   HeadingVariants & {
     /**
      * @summary informs the dom type.
@@ -46,7 +44,7 @@ export type HeadingProps = JSX.IntrinsicElements["h1"] &
 
 export const Heading = forwardRef<HTMLHeadingElement, HeadingProps>(
   ({ palette, level = "h3", as, className, ...props }, ref) => {
-    const Component = as ?? level ?? "h3";
+    const Component = as ?? level;
 
     return (
       <Component

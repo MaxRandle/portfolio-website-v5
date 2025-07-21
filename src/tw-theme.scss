@@ -90,6 +90,9 @@
   --color-danger-1100: var(--milano-red-1100);
   --color-danger-1200: var(--milano-red-1200);
   --color-danger-1300: var(--milano-red-1300);
+
+  --shadow-glow-sm: 0 0 15px -5px rgba(255, 255, 255, 0.08);
+  --shadow-glow-md: 0 0 25px -2px rgba(255, 255, 255, 0.08);
 }
 
 :root {

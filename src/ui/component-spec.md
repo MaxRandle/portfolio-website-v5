@@ -214,9 +214,7 @@ export const ComponentGroup = forwardRef<HTMLDivElement, ComponentGroupProps>(
 For components that can render as different HTML elements:
 
 ```typescript
-export type ComponentProps = JSX.IntrinsicElements["h1"] &
-  JSX.IntrinsicElements["h2"] &
-  JSX.IntrinsicElements["h3"] &
+export type ComponentProps = JSX.IntrinsicElements["h1" | "h2" | "h3"] &
   ComponentVariants & {
     /**
      * @summary informs the dom type.
@@ -227,7 +225,7 @@ export type ComponentProps = JSX.IntrinsicElements["h1"] &
 
 export const Component = forwardRef<HTMLHeadingElement, ComponentProps>(
   ({ level = "h3", as, className, ...props }, ref) => {
-    const Element = as ?? level ?? "h3";
+    const Element = as ?? level;
 
     return (
       <Element
