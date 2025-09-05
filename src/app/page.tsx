@@ -1,3 +1,4 @@
+import { BrandLogoIcon } from "@components/BrandLogoIcon";
 import { Alert } from "@ui/Alert";
 import { Avatar, AvatarContainer, AvatarGroup } from "@ui/Avatar";
 import { Badge } from "@ui/Badge";
@@ -172,6 +173,33 @@ export default function Home() {
             </div>
           </Nav>
         </Container>
+      </Section>
+
+      <Section>
+        <Container>
+          <BrandLogoIcon />
+        </Container>
+      </Section>
+
+      <Section palette="surface">
+        <div className="mx-auto opacity-100 w-120 h-120 border">
+          <div className="relative inset-1/2">
+            <BrandLogoIcon className="absolute -translate-1/2 -top-5 left-16 size-16 -rotate-6" />
+            <BrandLogoIcon className="absolute -translate-1/2 top-5 -left-16 size-16 -rotate-6" />
+
+            <BrandLogoIcon className="absolute -translate-1/2 -top-20 -left-10 size-10 rotate-6" />
+            <BrandLogoIcon className="absolute -translate-1/2 top-20 left-10 size-10 rotate-6" />
+
+            <BrandLogoIcon className="absolute -translate-1/2 -top-32 left-16 size-6 rotate-16" />
+            <BrandLogoIcon className="absolute -translate-1/2 top-32 -left-16 size-6 rotate-16" />
+
+            <BrandLogoIcon className="absolute -translate-1/2 top-24 left-36 size-6 -rotate-16" />
+            <BrandLogoIcon className="absolute -translate-1/2 -top-24 -left-36 size-6 -rotate-16" />
+
+            <BrandLogoIcon className="absolute -translate-1/2 top-46 left-12 size-6 rotate-24" />
+            <BrandLogoIcon className="absolute -translate-1/2 -top-46 -left-12 size-6 rotate-24" />
+          </div>
+        </div>
       </Section>
     </main>
   );
