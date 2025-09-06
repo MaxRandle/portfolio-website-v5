@@ -73,7 +73,7 @@ export type CardLinkProps = React.ComponentPropsWithoutRef<typeof NextLink> &
   CardVariants;
 
 export const CardLink = forwardRef<
-  React.ElementRef<typeof NextLink>,
+  React.ComponentRef<typeof NextLink>,
   CardLinkProps
 >(({ className, palette, elevation, ...props }, ref) => {
   return (
