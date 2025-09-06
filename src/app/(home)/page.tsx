@@ -13,6 +13,13 @@ import { Nav, NavLink } from "@ui/Nav";
 import { Section } from "@ui/Section";
 import { Typography } from "@ui/Typography";
 import { FiArrowLeft, FiArrowRight, FiPlus } from "react-icons/fi";
+import {
+  SiNextdotjs,
+  SiReact,
+  SiTailwindcss,
+  SiTypescript,
+} from "react-icons/si";
+import { TechStackSection } from "./TechStackSection";
 
 export default function Home() {
   return (
@@ -176,27 +183,11 @@ export default function Home() {
         </Container>
       </Section>
 
+      <TechStackSection />
+
       <Section>
         <Container>
-          <BrandLogoIcon />
-        </Container>
-      </Section>
-
-      <Section palette="surface" className="relative">
-        <LogoBackground className="absolute inset-1/2 -transform-1/2" />
-        <Container className="relative grid gap-4 md:grid-cols-2">
-          <Card palette="base">
-            <CardContent>Next.js</CardContent>
-          </Card>
-          <Card palette="base">
-            <CardContent>Typescript</CardContent>
-          </Card>
-          <Card palette="base">
-            <CardContent>Tailwind</CardContent>
-          </Card>
-          <Card palette="base">
-            <CardContent>React</CardContent>
-          </Card>
+          <LogoBackground className="w-full" />
         </Container>
       </Section>
 
