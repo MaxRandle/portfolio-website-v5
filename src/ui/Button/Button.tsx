@@ -7,10 +7,6 @@ const ButtonStyles = tv({
     "focus:outline-none",
     "focus:ring-4",
     "focus:border",
-    "focus:ring-primary-400",
-    "focus:border-primary-700",
-    "focus:dark:ring-primary-900",
-    "focus:dark:border-primary-300",
 
     "font-semibold tracking-wider border rounded-full shadow-sm inline-flex items-center justify-center gap-4 transition-colors",
     "group-[&]/button-group:px-4",
@@ -30,6 +26,11 @@ const ButtonStyles = tv({
      */
     intent: {
       primary: [
+        "focus:ring-primary-400",
+        "focus:border-primary-700",
+        "focus:dark:ring-primary-900",
+        "focus:dark:border-primary-300",
+
         "text-white",
         "focus:border-primary-900",
         "focus:dark:border-primary-300",
@@ -37,6 +38,11 @@ const ButtonStyles = tv({
         "border-primary-800 hover:border-primary-700",
       ],
       secondary: [
+        "focus:ring-primary-400",
+        "focus:border-primary-700",
+        "focus:dark:ring-primary-900",
+        "focus:dark:border-primary-300",
+
         "text-base-900",
         "bg-base-100 border-base-400",
         "hover:bg-base-200 hover:border-base-500",
@@ -52,7 +58,6 @@ const ButtonStyles = tv({
 
         "text-white",
         "bg-danger-800 hover:bg-danger-700",
-
         "border-danger-800 hover:border-danger-700",
       ],
     },

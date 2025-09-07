@@ -3,7 +3,8 @@ import { tv, type VariantProps } from "tailwind-variants";
 
 const InputStyles = tv({
   base: [
-    "border appearance-none px-4 py-3 rounded-lg focus:ring-active w-full",
+    "focus:ring-primary",
+    "border appearance-none px-4 py-3 rounded-lg w-full",
     "placeholder-base-700 dark:placeholder-base-600",
 
     // base classes
@@ -11,7 +12,7 @@ const InputStyles = tv({
     "dark:text-base-400 dark:bg-base-1200 dark:border-base-1000",
 
     // invalid classes
-    "focus:invalid:ring-danger",
+    "invalid:focus:ring-danger",
     "invalid:text-danger-900 invalid:bg-danger-100 invalid:border-danger-400",
     "dark:invalid:text-danger-400 dark:invalid:bg-danger-1200 dark:invalid:border-danger-1000",
 

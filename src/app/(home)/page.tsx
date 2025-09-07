@@ -1,4 +1,3 @@
-import { BrandLogoIcon } from "@components/BrandLogoIcon";
 import { LogoBackground } from "@components/LogoBackground";
 import { Alert } from "@ui/Alert";
 import { Avatar, AvatarContainer, AvatarGroup } from "@ui/Avatar";
@@ -13,12 +12,7 @@ import { Nav, NavLink } from "@ui/Nav";
 import { Section } from "@ui/Section";
 import { Typography } from "@ui/Typography";
 import { FiArrowLeft, FiArrowRight, FiPlus } from "react-icons/fi";
-import {
-  SiNextdotjs,
-  SiReact,
-  SiTailwindcss,
-  SiTypescript,
-} from "react-icons/si";
+
 import { TechStackSection } from "./TechStackSection";
 
 export default function Home() {
@@ -26,17 +20,21 @@ export default function Home() {
     <main>
       <Section>
         <Container className="space-y-4">
-          <Alert status="danger" title="You SUCK">
-            Please refrain from further sucking.
+          <Alert status="success" title="Success alert">
+            Used to give feedback to a user that an action they have just taken
+            was successful.
           </Alert>
-          <Alert status="warning" title="You SUCK">
-            Please refrain from further sucking.
+          <Alert status="info" title="Info alert">
+            Used for general non-essential information.
           </Alert>
-          <Alert status="info" title="You SUCK">
-            Please refrain from further sucking.
+          <Alert status="warning" title="Warning Alert">
+            Used to make the user aware of a possible risk or change to normal
+            behaviour.
           </Alert>
-          <Alert status="success" title="You SUCK">
-            Please refrain from further sucking.
+          <Alert status="danger" title="Danger alert">
+            Used to alert a user that an action they have just taken has failed,
+            or when it is essential for the user to understand that they are
+            about to take an action that is destructive and irreversible.
           </Alert>
         </Container>
       </Section>

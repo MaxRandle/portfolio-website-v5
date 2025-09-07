@@ -9,7 +9,7 @@ import {
 } from "react-icons/bs";
 
 const AlertStyles = tv({
-  base: "rounded-xl border-2 p-6 flex flex-col gap-3",
+  base: "rounded-lg border-2 p-4 flex flex-col gap-3",
   variants: {
     status: {
       success: [
