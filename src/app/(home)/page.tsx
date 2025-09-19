@@ -14,6 +14,7 @@ import { Typography } from "@ui/Typography";
 import { FiArrowLeft, FiArrowRight, FiPlus } from "react-icons/fi";
 
 import { TechStackSection } from "./TechStackSection";
+import NavDemo from "@components/NavDemo";
 
 export default function Home() {
   return (
@@ -189,7 +190,11 @@ export default function Home() {
         </Container>
       </Section>
 
-      <Section></Section>
+      <Section>
+        <Container>
+          <NavDemo />
+        </Container>
+      </Section>
     </main>
   );
 }
