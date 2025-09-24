@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef } from "react";
+import { twMerge } from "tailwind-merge";
 
 type NavItem = {
   label: string;
@@ -29,19 +30,23 @@ const navData: NavItem[] = [
 
 function NavMenu({
   items,
+  className,
   ...props
 }: {
   items: NavItem[];
   className?: string;
 }) {
   return (
-    <ul {...props}>
+    <ul className={twMerge("relative w-24", className)} {...props}>
       {items.map((item) => (
         <li key={item.label}>
           {item.children ? (
             <details>
-              <summary>{item.label}</summary>
-              <NavMenu className="ml-4" items={item.children} />
+              <summary tabIndex={0}>{item.label}</summary>
+              <NavMenu
+                className="absolute top-0 left-[100%]"
+                items={item.children}
+              />
             </details>
           ) : (
             <a href={item.href}>{item.label}</a>
