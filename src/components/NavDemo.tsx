@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef } from "react";
+import { FiChevronDown, FiChevronRight } from "react-icons/fi";
 import { twMerge } from "tailwind-merge";
 
 type NavItem = {
@@ -42,14 +43,23 @@ function NavMenu({
         <li key={item.label}>
           {item.children ? (
             <details>
-              <summary tabIndex={0}>{item.label}</summary>
+              <summary
+                className="flex items-center gap-2 justify-between marker:content-none"
+                tabIndex={0}
+              >
+                {item.label}
+                <FiChevronDown className="[details[open]>summary>&]:hidden block" />
+                <FiChevronRight className="[details[open]>summary>&]:block hidden" />
+              </summary>
               <NavMenu
-                className="absolute top-0 left-[100%]"
+                className="ml-4 absolute top-0 left-[100%]"
                 items={item.children}
               />
             </details>
           ) : (
-            <a href={item.href}>{item.label}</a>
+            <a className="block" href={item.href}>
+              {item.label}
+            </a>
           )}
         </li>
       ))}
