@@ -115,29 +115,71 @@ body {
 @utility ring-primary {
   --focus-ring-color: var(--color-primary-400);
   --focus-border-color: var(--color-primary-700);
+  box-shadow:
+    0 0 0 1px inset var(--focus-border-color),
+    0 0 0 4px var(--focus-ring-color);
 
   @media (prefers-color-scheme: dark) {
     --focus-ring-color: var(--color-primary-900);
     --focus-border-color: var(--color-primary-300);
+    box-shadow: 0 0 6px 6px var(--focus-ring-color);
   }
 
   outline: none;
-  box-shadow: 0 0 0 4px var(--focus-ring-color);
   border-width: 1px;
   border-color: var(--focus-border-color);
+}
+
+@utility ring-primary-solid {
+  --focus-ring-color: var(--color-primary-400);
+  --focus-border-color: var(--color-primary-100);
+  box-shadow:
+    0 0 0 1px inset var(--focus-border-color),
+    0 0 0 4px var(--focus-ring-color);
+
+  @media (prefers-color-scheme: dark) {
+    --focus-ring-color: var(--color-primary-900);
+    --focus-border-color: var(--color-primary-300);
+    box-shadow: 0 0 6px 6px var(--focus-ring-color);
+  }
+
+  border-color: var(--focus-border-color);
+  outline: none;
+  border-width: 1px;
 }
 
 @utility ring-danger {
   --focus-ring-color: var(--color-danger-400);
   --focus-border-color: var(--color-danger-700);
+  box-shadow:
+    0 0 0 1px inset var(--focus-border-color),
+    0 0 0 4px var(--focus-ring-color);
 
   @media (prefers-color-scheme: dark) {
     --focus-ring-color: var(--color-danger-900);
     --focus-border-color: var(--color-danger-300);
+    box-shadow: 0 0 6px 6px var(--focus-ring-color);
   }
 
   outline: none;
-  box-shadow: 0 0 0 4px var(--focus-ring-color);
+  border-width: 1px;
+  border-color: var(--focus-border-color);
+}
+
+@utility ring-danger-solid {
+  --focus-ring-color: var(--color-danger-400);
+  --focus-border-color: var(--color-danger-100);
+  box-shadow:
+    0 0 0 1px inset var(--focus-border-color),
+    0 0 0 4px var(--focus-ring-color);
+
+  @media (prefers-color-scheme: dark) {
+    --focus-ring-color: var(--color-danger-900);
+    --focus-border-color: var(--color-danger-300);
+    box-shadow: 0 0 6px 6px var(--focus-ring-color);
+  }
+
+  outline: none;
   border-width: 1px;
   border-color: var(--focus-border-color);
 }

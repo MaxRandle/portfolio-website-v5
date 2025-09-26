@@ -9,7 +9,7 @@ import {
 } from "react-icons/bs";
 
 const AlertStyles = tv({
-  base: "rounded-lg border-2 p-4 flex flex-col gap-3",
+  base: "rounded-lg border-2 p-4 flex flex-col gap-2",
   variants: {
     status: {
       success: [
@@ -53,7 +53,7 @@ export const Alert = forwardRef<HTMLDivElement, AlertProps>(
 
     return (
       <div ref={ref} className={AlertStyles({ status, className })} {...props}>
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-3">
           <p>
             <Icon size={24} />
           </p>
