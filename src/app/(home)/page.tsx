@@ -15,6 +15,7 @@ import { FiArrowLeft, FiArrowRight, FiPlus } from "react-icons/fi";
 
 import { TechStackSection } from "./TechStackSection";
 import NavDemo from "@components/NavDemo";
+import { ColorPalette } from "@components/ColorPalette";
 
 export default function Home() {
   return (
@@ -193,6 +194,12 @@ export default function Home() {
       <Section>
         <Container>
           <NavDemo />
+        </Container>
+      </Section>
+
+      <Section palette="base">
+        <Container>
+          <ColorPalette />
         </Container>
       </Section>
     </main>

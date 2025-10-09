@@ -20,6 +20,7 @@ const SectionStyles = tv({
       transparent: ["py-0 sm:py-0"],
       surface: ["my-0 sm:my-0", "bg-base-300 dark:bg-base-1200"],
       primary: ["my-0 sm:my-0", "bg-primary-900 dark:bg-primary-1100", "dark"],
+      base: ["my-0 sm:my-0", "bg-white dark:bg-black"],
     },
   },
   defaultVariants: {
