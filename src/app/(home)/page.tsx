@@ -16,6 +16,7 @@ import { FiArrowLeft, FiArrowRight, FiPlus } from "react-icons/fi";
 import { TechStackSection } from "./TechStackSection";
 import NavDemo from "@components/NavDemo";
 import { ColorPalette } from "@components/ColorPalette";
+import { AnimatedBrandLogoIcon } from "@components/AnimatedBrandLogoIcon";
 
 export default function Home() {
   return (
@@ -201,6 +202,10 @@ export default function Home() {
         <Container>
           <ColorPalette />
         </Container>
+      </Section>
+
+      <Section>
+        <AnimatedBrandLogoIcon />
       </Section>
     </main>
   );
