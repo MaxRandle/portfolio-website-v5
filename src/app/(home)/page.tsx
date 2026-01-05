@@ -13,9 +13,10 @@ export default function Home() {
           <LinkStyleButton className="shrink-0 p-2 border border-transparent">
             <BrandLogoIcon size={28} />
           </LinkStyleButton>
-          <NavLink isActive={true} href={"/"}>
+          <NavLink isActive href={"/"}>
             About
           </NavLink>
+          <NavLink href={"/blog"}>Blog</NavLink>
         </Container>
       </Nav>
       <main>

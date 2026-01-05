@@ -6,14 +6,14 @@ const NavLinkStyles = tv({
   base: [
     "focus-visible:ring-active border border-transparent",
     "rounded-lg p-2 text-lg sm:text-xl leading-loose",
-    "text-base-500 hover:text-white",
+    "text-base-700 hover:text-black dark:text-base-500 dark:hover:text-white",
   ],
   variants: {
     /**
      * @summary boolean indicating whether the NavLink is active
      */
     isActive: {
-      true: "text-white",
+      true: "text-black dark:text-white",
       false: "",
     },
   },
