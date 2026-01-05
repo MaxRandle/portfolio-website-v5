@@ -10,8 +10,8 @@ export const LogoBackground: React.FC<LogoBackgroundProps> = ({
 }) => {
   return (
     <div className={twMerge("relative aspect-square", className)} {...props}>
-      <BrandLogoIcon className="absolute -translate-1/2 top-[calc(50%-4%)] left-[calc(50%+20%)] size-[13%] -rotate-6" />
-      <BrandLogoIcon className="absolute -translate-1/2 top-[calc(50%+4%)] left-[calc(50%-20%)] size-[13%] -rotate-6" />
+      <BrandLogoIcon className="absolute -translate-1/2 top-[calc(50%-4%)] left-[calc(50%+16%)] size-[13%] -rotate-6" />
+      <BrandLogoIcon className="absolute -translate-1/2 top-[calc(50%+4%)] left-[calc(50%-16%)] size-[13%] -rotate-6" />
 
       <BrandLogoIcon className="absolute -translate-1/2 top-[calc(50%-21%)] left-[calc(50%-8%)] size-[8%] rotate-6" />
       <BrandLogoIcon className="absolute -translate-1/2 top-[calc(50%+21%)] left-[calc(50%+8%)] size-[8%] rotate-6" />
