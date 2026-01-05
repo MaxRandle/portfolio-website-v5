@@ -3,8 +3,18 @@
 import { motion, useAnimate } from "framer-motion";
 
 import { useEffect, useState } from "react";
+import { twMerge } from "tailwind-merge";
 
-export function AnimatedBrandLogoIcon() {
+type Props = Omit<React.ComponentProps<typeof motion.svg>, "className"> & {
+  className?: string;
+  onAnimationFinish?: () => void;
+};
+
+export function AnimatedBrandLogoIcon({
+  className,
+  onAnimationFinish,
+  ...props
+}: Props) {
   const [svgScope, animate] = useAnimate();
   const [rightPathScope, _animateRight] = useAnimate();
   const [leftPathScope, _animateLeft] = useAnimate();
@@ -70,6 +80,7 @@ export function AnimatedBrandLogoIcon() {
       setIsAnimating(true);
       await animation;
       setIsAnimating(false);
+      onAnimationFinish?.();
     };
 
     handleAnimation();
@@ -79,7 +90,7 @@ export function AnimatedBrandLogoIcon() {
   return (
     <motion.svg
       ref={svgScope}
-      className="h-60 sm:h-80 overflow-visible mx-auto"
+      className={twMerge("h-60 sm:h-80 overflow-visible mx-auto", className)}
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 64 64"
       // TODO - figure out why this can't be moved into the `animate()` sequence array.
@@ -98,6 +109,7 @@ export function AnimatedBrandLogoIcon() {
       transition={{
         default: { delay: 2, duration: 2, ease: "easeOut" },
       }}
+      {...props}
     >
       <motion.path
         ref={leftPathScope}
