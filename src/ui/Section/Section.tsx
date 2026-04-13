@@ -1,4 +1,4 @@
-import React, { forwardRef, JSX } from "react";
+import React, { forwardRef } from "react";
 import { tv, type VariantProps } from "tailwind-variants";
 
 const SectionStyles = tv({
@@ -31,7 +31,7 @@ const SectionStyles = tv({
 
 type SectionVariants = VariantProps<typeof SectionStyles>;
 
-export type SectionProps = JSX.IntrinsicElements["section"] & SectionVariants;
+export type SectionProps = React.ComponentPropsWithoutRef<"section"> & SectionVariants;
 
 export const Section = forwardRef<HTMLElement, SectionProps>(
   ({ className, palette, spacing, ...props }, ref) => {

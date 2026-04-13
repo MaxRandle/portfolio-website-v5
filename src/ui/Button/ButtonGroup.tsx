@@ -1,4 +1,4 @@
-import React, { forwardRef, JSX } from "react";
+import React, { forwardRef } from "react";
 import { tv, type VariantProps } from "tailwind-variants";
 
 const ButtonGroupStyles = tv({
@@ -7,7 +7,7 @@ const ButtonGroupStyles = tv({
 
 type ButtonGroupVariants = VariantProps<typeof ButtonGroupStyles>;
 
-export type ButtonGroupProps = JSX.IntrinsicElements["div"] &
+export type ButtonGroupProps = React.ComponentPropsWithoutRef<"div"> &
   ButtonGroupVariants;
 
 export const ButtonGroup = forwardRef<HTMLDivElement, ButtonGroupProps>(

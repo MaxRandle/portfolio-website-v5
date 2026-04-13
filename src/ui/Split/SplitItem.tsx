@@ -1,4 +1,4 @@
-import React, { forwardRef, JSX } from "react";
+import React, { forwardRef } from "react";
 import { tv, type VariantProps } from "tailwind-variants";
 
 const SplitItemStyles = tv({
@@ -13,7 +13,7 @@ const SplitItemStyles = tv({
 
 type SplitItemVariants = VariantProps<typeof SplitItemStyles>;
 
-export type SplitItemProps = JSX.IntrinsicElements["div"] &
+export type SplitItemProps = React.ComponentPropsWithoutRef<"div"> &
   Required<SplitItemVariants>;
 
 export const SplitItem = forwardRef<HTMLDivElement, SplitItemProps>(

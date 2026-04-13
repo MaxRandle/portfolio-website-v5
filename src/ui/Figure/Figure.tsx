@@ -1,4 +1,4 @@
-import React, { forwardRef, JSX } from "react";
+import React, { forwardRef } from "react";
 import { tv, type VariantProps } from "tailwind-variants";
 import NextImage, { ImageProps as NextImageProps } from "next/image";
 
@@ -8,7 +8,7 @@ const FigureStyles = tv({
 
 type FigureVariants = VariantProps<typeof FigureStyles>;
 
-export type FigureProps = JSX.IntrinsicElements["figure"] &
+export type FigureProps = React.ComponentPropsWithoutRef<"figure"> &
   FigureVariants &
   Pick<NextImageProps, "src" | "alt" | "priority"> &
   Required<Pick<NextImageProps, "width" | "height">>;

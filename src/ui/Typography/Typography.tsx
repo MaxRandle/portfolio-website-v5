@@ -1,4 +1,4 @@
-import React, { forwardRef, JSX } from "react";
+import React, { forwardRef } from "react";
 import { tv, type VariantProps } from "tailwind-variants";
 
 const TypographyStyles = tv({
@@ -33,7 +33,7 @@ const TypographyStyles = tv({
 
 type TypographyVariants = VariantProps<typeof TypographyStyles>;
 
-export type TypographyProps = JSX.IntrinsicElements["p"] & TypographyVariants;
+export type TypographyProps = React.ComponentPropsWithoutRef<"p"> & TypographyVariants;
 
 export const Typography = forwardRef<HTMLParagraphElement, TypographyProps>(
   ({ palette, level, className, ...props }, ref) => {

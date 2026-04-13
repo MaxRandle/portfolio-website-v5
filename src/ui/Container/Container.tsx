@@ -1,5 +1,5 @@
 import { tv, type VariantProps } from "tailwind-variants";
-import React, { JSX } from "react";
+import React from "react";
 
 const ContainerStyles = tv({
   base: "mx-auto px-6 lg:px-10 w-full md:max-w-[48rem] lg:max-w-[64rem]",
@@ -8,7 +8,7 @@ const ContainerStyles = tv({
 
 type ContainerVariants = VariantProps<typeof ContainerStyles>;
 
-export type ContainerProps = JSX.IntrinsicElements["div"] & ContainerVariants;
+export type ContainerProps = React.ComponentPropsWithoutRef<"div"> & ContainerVariants;
 
 export const Container = React.forwardRef<
   React.ComponentRef<"div">,

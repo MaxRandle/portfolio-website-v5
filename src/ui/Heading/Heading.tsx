@@ -1,4 +1,4 @@
-import React, { forwardRef, JSX } from "react";
+import React, { forwardRef } from "react";
 import { tv, type VariantProps } from "tailwind-variants";
 
 const HeadingStyles = tv({
@@ -33,7 +33,7 @@ const HeadingStyles = tv({
 
 type HeadingVariants = VariantProps<typeof HeadingStyles>;
 
-export type HeadingProps = JSX.IntrinsicElements["h1" | "h2" | "h3"] &
+export type HeadingProps = React.ComponentPropsWithoutRef<"h1"> &
   HeadingVariants & {
     /**
      * @summary informs the dom type.

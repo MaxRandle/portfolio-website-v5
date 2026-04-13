@@ -1,4 +1,4 @@
-import React, { forwardRef, JSX } from "react";
+import React, { forwardRef } from "react";
 import { tv, type VariantProps } from "tailwind-variants";
 
 const BadgeStyles = tv({
@@ -12,7 +12,7 @@ const BadgeStyles = tv({
 
 type BadgeVariants = VariantProps<typeof BadgeStyles>;
 
-export type BadgeProps = JSX.IntrinsicElements["span"] & BadgeVariants;
+export type BadgeProps = React.ComponentPropsWithoutRef<"span"> & BadgeVariants;
 
 export const Badge = forwardRef<HTMLSpanElement, BadgeProps>(
   ({ className, ...props }, ref) => {

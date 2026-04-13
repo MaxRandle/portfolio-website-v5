@@ -1,4 +1,4 @@
-import React, { forwardRef, JSX } from "react";
+import React, { forwardRef } from "react";
 import { tv, type VariantProps } from "tailwind-variants";
 
 const InputAdornmentStyles = tv({
@@ -18,7 +18,7 @@ const InputAdornmentStyles = tv({
 
 type InputAdornmentVariants = VariantProps<typeof InputAdornmentStyles>;
 
-export type InputAdornmentProps = JSX.IntrinsicElements["div"] &
+export type InputAdornmentProps = React.ComponentPropsWithoutRef<"div"> &
   InputAdornmentVariants;
 
 export const InputAdornment = forwardRef<HTMLDivElement, InputAdornmentProps>(

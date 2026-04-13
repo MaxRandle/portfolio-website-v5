@@ -1,4 +1,4 @@
-import React, { forwardRef, JSX } from "react";
+import React, { forwardRef } from "react";
 import { tv, type VariantProps } from "tailwind-variants";
 
 const DividerStyles = tv({
@@ -7,7 +7,7 @@ const DividerStyles = tv({
 
 type DividerVariants = VariantProps<typeof DividerStyles>;
 
-export type DividerProps = JSX.IntrinsicElements["hr"] & DividerVariants;
+export type DividerProps = React.ComponentPropsWithoutRef<"hr"> & DividerVariants;
 
 export const Divider = forwardRef<HTMLHRElement, DividerProps>(
   ({ className, ...props }, ref) => {

@@ -1,4 +1,4 @@
-import React, { forwardRef, JSX } from "react";
+import React, { forwardRef } from "react";
 import { tv, type VariantProps } from "tailwind-variants";
 
 const InputGroupStyles = tv({
@@ -7,7 +7,7 @@ const InputGroupStyles = tv({
 
 type InputGroupVariants = VariantProps<typeof InputGroupStyles>;
 
-export type InputGroupProps = JSX.IntrinsicElements["div"] & InputGroupVariants;
+export type InputGroupProps = React.ComponentPropsWithoutRef<"div"> & InputGroupVariants;
 
 export const InputGroup = forwardRef<HTMLDivElement, InputGroupProps>(
   ({ className, ...props }, ref) => {

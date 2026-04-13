@@ -1,4 +1,4 @@
-import { forwardRef, JSX } from "react";
+import React, { forwardRef } from "react";
 import { tv, type VariantProps } from "tailwind-variants";
 
 import {
@@ -34,7 +34,7 @@ const AlertStyles = tv({
 
 type AlertVariants = VariantProps<typeof AlertStyles>;
 
-export type AlertProps = JSX.IntrinsicElements["div"] &
+export type AlertProps = React.ComponentPropsWithoutRef<"div"> &
   Omit<AlertVariants, "status"> &
   Required<Pick<AlertVariants, "status">> & {
     title: React.ReactNode;

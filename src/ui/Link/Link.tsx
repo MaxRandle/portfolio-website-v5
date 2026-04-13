@@ -1,4 +1,4 @@
-import React, { forwardRef, JSX } from "react";
+import React, { forwardRef } from "react";
 import { tv, type VariantProps } from "tailwind-variants";
 import NextLink from "next/link";
 
@@ -21,7 +21,7 @@ export const Link = forwardRef<HTMLAnchorElement, LinkProps>(
 
 Link.displayName = "Link";
 
-export type ExternalLinkProps = JSX.IntrinsicElements["a"] & LinkVariants;
+export type ExternalLinkProps = React.ComponentPropsWithoutRef<"a"> & LinkVariants;
 
 export const ExternalLink = forwardRef<HTMLAnchorElement, ExternalLinkProps>(
   ({ className, ...props }, ref) => {
@@ -39,7 +39,7 @@ export const ExternalLink = forwardRef<HTMLAnchorElement, ExternalLinkProps>(
 
 ExternalLink.displayName = "ExternalLink";
 
-export type LinkStyleButtonProps = JSX.IntrinsicElements["button"];
+export type LinkStyleButtonProps = React.ComponentPropsWithoutRef<"button">;
 
 export const LinkStyleButton = forwardRef<
   HTMLButtonElement,

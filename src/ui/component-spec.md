@@ -52,13 +52,13 @@ const ComponentStyles = tv({
 type ComponentVariants = VariantProps<typeof ComponentStyles>;
 
 // 3. Define component props
-export type ComponentProps = JSX.IntrinsicElements["element"] &
+export type ComponentProps = React.ComponentPropsWithoutRef<"element"> &
   ComponentVariants;
 ```
 
 ### Prop Type Patterns
 
-- **Base Element**: Extend `JSX.IntrinsicElements["element"]` for the underlying HTML element
+- **Base Element**: Extend `React.ComponentPropsWithoutRef<"element">` for the underlying HTML element
 - **Variants**: Use `VariantProps<typeof ComponentStyles>` for styling variants
 - **Required Props**: Use `Required<Pick<Type, "prop">>` for mandatory variant props
 - **Custom Props**: Add component-specific props with JSDoc documentation
@@ -214,7 +214,7 @@ export const ComponentGroup = forwardRef<HTMLDivElement, ComponentGroupProps>(
 For components that can render as different HTML elements:
 
 ```typescript
-export type ComponentProps = JSX.IntrinsicElements["h1" | "h2" | "h3"] &
+export type ComponentProps = React.ComponentPropsWithoutRef<"h1"> &
   ComponentVariants & {
     /**
      * @summary informs the dom type.

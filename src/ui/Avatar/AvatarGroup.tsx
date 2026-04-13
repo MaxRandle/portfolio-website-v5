@@ -1,4 +1,4 @@
-import React, { forwardRef, JSX } from "react";
+import React, { forwardRef } from "react";
 import { tv, type VariantProps } from "tailwind-variants";
 
 const AvatarGroupStyles = tv({
@@ -8,7 +8,7 @@ const AvatarGroupStyles = tv({
 
 type AvatarGroupVariants = VariantProps<typeof AvatarGroupStyles>;
 
-export type AvatarGroupProps = JSX.IntrinsicElements["div"] &
+export type AvatarGroupProps = React.ComponentPropsWithoutRef<"div"> &
   AvatarGroupVariants;
 
 export const AvatarGroup = forwardRef<HTMLDivElement, AvatarGroupProps>(

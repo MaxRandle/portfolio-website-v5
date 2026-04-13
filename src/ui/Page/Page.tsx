@@ -1,4 +1,4 @@
-import React, { forwardRef, JSX } from "react";
+import React, { forwardRef } from "react";
 import { tv, type VariantProps } from "tailwind-variants";
 
 const PageStyles = tv({
@@ -7,7 +7,7 @@ const PageStyles = tv({
 
 type PageVariants = VariantProps<typeof PageStyles>;
 
-export type PageProps = JSX.IntrinsicElements["main"] & PageVariants;
+export type PageProps = React.ComponentPropsWithoutRef<"main"> & PageVariants;
 
 export const Page = forwardRef<HTMLElement, PageProps>(
   ({ className, ...props }, ref) => {

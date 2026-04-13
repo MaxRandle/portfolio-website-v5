@@ -1,4 +1,4 @@
-import React, { forwardRef, JSX } from "react";
+import React, { forwardRef } from "react";
 import { tv, type VariantProps } from "tailwind-variants";
 
 const AvatarContainerStyles = tv({
@@ -8,7 +8,7 @@ const AvatarContainerStyles = tv({
 
 type AvatarContainerVariants = VariantProps<typeof AvatarContainerStyles>;
 
-export type AvatarContainerProps = JSX.IntrinsicElements["div"] &
+export type AvatarContainerProps = React.ComponentPropsWithoutRef<"div"> &
   AvatarContainerVariants;
 
 export const AvatarContainer = forwardRef<HTMLDivElement, AvatarContainerProps>(

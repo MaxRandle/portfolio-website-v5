@@ -1,4 +1,4 @@
-import React, { forwardRef, JSX } from "react";
+import React, { forwardRef } from "react";
 import { tv, type VariantProps } from "tailwind-variants";
 
 const InputStyles = tv({
@@ -34,7 +34,7 @@ const InputStyles = tv({
 
 type InputVariants = VariantProps<typeof InputStyles>;
 
-export type InputProps = JSX.IntrinsicElements["input"] & InputVariants;
+export type InputProps = React.ComponentPropsWithoutRef<"input"> & InputVariants;
 
 export const Input = forwardRef<HTMLInputElement, InputProps>(
   ({ className, ...props }, ref) => {

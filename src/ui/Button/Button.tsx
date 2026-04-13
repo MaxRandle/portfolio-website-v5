@@ -1,4 +1,4 @@
-import React, { forwardRef, JSX } from "react";
+import React, { forwardRef } from "react";
 import { tv, type VariantProps } from "tailwind-variants";
 import NextLink from "next/link";
 
@@ -71,7 +71,7 @@ const ButtonStyles = tv({
 
 type ButtonVariants = VariantProps<typeof ButtonStyles>;
 
-export type ButtonProps = JSX.IntrinsicElements["button"] & ButtonVariants;
+export type ButtonProps = React.ComponentPropsWithoutRef<"button"> & ButtonVariants;
 
 export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
   ({ className, intent, size, disabled, ...props }, ref) => {

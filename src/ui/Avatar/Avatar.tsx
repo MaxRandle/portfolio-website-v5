@@ -1,4 +1,4 @@
-import React, { forwardRef, JSX } from "react";
+import React, { forwardRef } from "react";
 import { tv, type VariantProps } from "tailwind-variants";
 import NextImage, { ImageProps as NextImageProps } from "next/image";
 
@@ -38,7 +38,7 @@ const AvatarStyles = tv({
 
 type AvatarVariants = VariantProps<typeof AvatarStyles>;
 
-export type AvatarProps = Omit<JSX.IntrinsicElements["div"], "children"> &
+export type AvatarProps = Omit<React.ComponentPropsWithoutRef<"div">, "children"> &
   AvatarVariants & {
     /**
      * @summary text to be rendered in place of an image

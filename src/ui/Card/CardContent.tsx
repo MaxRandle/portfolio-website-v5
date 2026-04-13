@@ -1,4 +1,4 @@
-import React, { forwardRef, JSX } from "react";
+import React, { forwardRef } from "react";
 import { tv, type VariantProps } from "tailwind-variants";
 
 const CardContentStyles = tv({
@@ -7,7 +7,7 @@ const CardContentStyles = tv({
 
 type CardContentVariants = VariantProps<typeof CardContentStyles>;
 
-export type CardContentProps = JSX.IntrinsicElements["div"] &
+export type CardContentProps = React.ComponentPropsWithoutRef<"div"> &
   CardContentVariants;
 
 export const CardContent = forwardRef<HTMLDivElement, CardContentProps>(

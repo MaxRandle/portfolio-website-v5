@@ -1,4 +1,4 @@
-import React, { forwardRef, JSX } from "react";
+import React, { forwardRef } from "react";
 import { tv, type VariantProps } from "tailwind-variants";
 
 const NavStyles = tv({
@@ -7,7 +7,7 @@ const NavStyles = tv({
 
 type NavVariants = VariantProps<typeof NavStyles>;
 
-export type NavProps = JSX.IntrinsicElements["nav"] & NavVariants;
+export type NavProps = React.ComponentPropsWithoutRef<"nav"> & NavVariants;
 
 export const Nav = forwardRef<HTMLElement, NavProps>(
   ({ className, ...props }, ref) => {
