@@ -435,7 +435,7 @@ export default function Home() {
               <Divider />
               <Typography>
                 Please see my portfolio website{" "}
-                <ExternalLink href="maxrandle.co.nz">
+                <ExternalLink href="https://maxrandle.co.nz">
                   maxrandle.co.nz
                 </ExternalLink>{" "}
                 for more about me.
