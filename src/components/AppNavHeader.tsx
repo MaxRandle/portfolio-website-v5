@@ -11,8 +11,8 @@ type Props = NavProps & {
 export function AppNavHeader({ currentRoute, ...props }: Props) {
   return (
     <Nav {...props}>
-      <Container className="flex items-center justify-between gap-6 sm:justify-start sm:gap-20">
-        <LinkStyleButton className="shrink-0 p-2 border border-transparent">
+      <Container className="flex items-center justify-evenly gap-6 sm:justify-start sm:gap-20">
+        <LinkStyleButton className="shrink-0 p-2 border border-transparent hidden sm:block">
           <BrandLogoIcon size={28} />
         </LinkStyleButton>
         <NavLink
@@ -26,6 +26,12 @@ export function AppNavHeader({ currentRoute, ...props }: Props) {
           isActive={currentRoute === ROUTE_MAP.blogPosts.root}
         >
           Blog
+        </NavLink>
+        <NavLink
+          href={ROUTE_MAP.resume.root}
+          isActive={currentRoute === ROUTE_MAP.resume.root}
+        >
+          Resume
         </NavLink>
       </Container>
     </Nav>
