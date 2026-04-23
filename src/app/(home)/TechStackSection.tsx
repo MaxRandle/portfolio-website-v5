@@ -12,7 +12,6 @@ import {
   SiTailwindcss,
   SiTypescript,
 } from "react-icons/si";
-
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 
@@ -32,7 +31,7 @@ export const TechStackSection: React.FC = () => {
       className="relative overflow-hidden"
     >
       <motion.div
-        className="w-[160rem] absolute top-1/2 left-1/2 -translate-1/2"
+        className="w-640 absolute top-1/2 left-1/2 -translate-1/2"
         style={{ y }}
       >
         <LogoBackground className="opacity-10" />

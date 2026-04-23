@@ -8,7 +8,7 @@ import { FaChevronRight } from "react-icons/fa";
 
 export const ResumeLinkSection: React.FC = () => {
   return (
-    <Section spacing="lg" className="relative overflow-hidden">
+    <Section spacing="lg">
       <Container className="flex w-full items-center">
         <Divider className="grow" />
         <ButtonStyleLink
