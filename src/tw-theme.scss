@@ -112,6 +112,16 @@ body {
   color: var(--foreground);
 }
 
+@theme inline {
+  --font-italianno: var(--font-italianno);
+}
+@theme inline {
+  --font-geom: var(--font-geom);
+}
+@theme inline {
+  --font-bangers: var(--font-bangers);
+}
+
 @utility ring-primary {
   --focus-ring-color: var(--color-primary-400);
   --focus-border-color: var(--color-primary-700);
