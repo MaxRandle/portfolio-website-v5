@@ -1,5 +1,5 @@
 import { JSX } from "react";
-import { BrandLogoIcon } from "./BrandLogoIcon";
+import { BrandLogoIcon } from "./svgs/BrandLogoIcon";
 import { twMerge } from "tailwind-merge";
 
 type LogoBackgroundProps = JSX.IntrinsicElements["div"];

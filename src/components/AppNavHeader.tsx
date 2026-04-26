@@ -1,7 +1,7 @@
 import { Nav, NavLink, NavProps } from "@ui/Nav";
 import { Container } from "@ui/Container";
 import { LinkStyleButton } from "@ui/Link";
-import { BrandLogoIcon } from "@components/BrandLogoIcon";
+import { BrandLogoIcon } from "@components/svgs/BrandLogoIcon";
 import { ROUTE_MAP } from "@config/index";
 
 type Props = NavProps & {
