@@ -33,7 +33,7 @@
     "jest": "^30.3.0",
     "jest-environment-jsdom": "^30.3.0",
     "postcss-preset-env": "^11.2.1",
-    "prettier-plugin-tailwindcss": "^0.7.2",
+    "prettier-plugin-tailwindcss": "^0.8.0",
     "tailwind-merge": "^3.5.0",
     "tailwindcss": "^4",
     "ts-jest": "^29.4.3",
