@@ -39,7 +39,7 @@ export const TechStackSection: React.FC = () => {
       <Container className="relative">
         <Heading level="h2">My Front-End stack</Heading>
         <div className="grid gap-4 md:grid-cols-2 mt-20">
-          <Card palette="base">
+          <Card palette="translucent">
             <CardContent className="flex flex-col gap-4">
               <SiTypescript size={40} />
               <Heading level={"h3"}>TypeScript</Heading>
@@ -52,7 +52,7 @@ export const TechStackSection: React.FC = () => {
             </CardContent>
           </Card>
 
-          <Card palette="base">
+          <Card palette="translucent">
             <CardContent className="flex flex-col gap-4">
               <SiReact size={40} />
               <Heading level={"h3"}>React</Heading>
@@ -64,7 +64,7 @@ export const TechStackSection: React.FC = () => {
             </CardContent>
           </Card>
 
-          <Card palette="base">
+          <Card palette="translucent">
             <CardContent className="flex flex-col gap-4">
               <SiTailwindcss size={40} />
               <Heading level={"h3"}>TailwindCSS</Heading>
@@ -76,7 +76,7 @@ export const TechStackSection: React.FC = () => {
             </CardContent>
           </Card>
 
-          <Card palette="base">
+          <Card palette="translucent">
             <CardContent className="flex flex-col gap-4">
               <SiNextdotjs size={40} />
               <Heading level={"h3"}>Next.js</Heading>

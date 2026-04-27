@@ -20,9 +20,11 @@ const CardStyles = tv({
         "bg-base-200 border-base-400",
         "dark:bg-base-1200 dark:border-base-1000",
       ],
-      gradient: [
-        "bg-gradient-rad-2",
-        "from-primary-800 dark:from-primary-600 to-transparent",
+      translucent: [
+        "border",
+        "backdrop-blur-xs",
+        "bg-base-100/80 border-base-300/80",
+        "dark:bg-base-1300/80 dark:border-base-1000/80",
       ],
     },
     /**
@@ -54,7 +56,7 @@ export const Card = forwardRef<HTMLDivElement, CardProps>(
         {...props}
       />
     );
-  }
+  },
 );
 
 Card.displayName = "Card";
