@@ -23,8 +23,8 @@ const CardStyles = tv({
       translucent: [
         "border",
         "backdrop-blur-xs",
-        "bg-base-100/80 border-base-300/80",
-        "dark:bg-base-1300/80 dark:border-base-1000/80",
+        "bg-base-100/70 border-base-300/70",
+        "dark:bg-base-1300/70 dark:border-base-1000/70",
       ],
     },
     /**

@@ -1,8 +1,6 @@
 import { AnimatedXSnakePath } from "@components/AnimatedXSnakePath";
-import { Container } from "@ui/Container";
 import { Heading } from "@ui/Heading";
 import { Section } from "@ui/Section";
-import { Typography } from "@ui/Typography";
 import { FiSmartphone } from "react-icons/fi";
 
 export const WorkSection: React.FC = () => {

@@ -34,7 +34,7 @@ export const TechStackSection: React.FC = () => {
         className="w-640 absolute top-1/2 left-1/2 -translate-1/2"
         style={{ y }}
       >
-        <LogoBackground className="opacity-10" />
+        <LogoBackground className="opacity-15" />
       </motion.div>
       <Container className="relative">
         <Heading level="h2">My Front-End stack</Heading>
