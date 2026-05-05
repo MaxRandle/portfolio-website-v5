@@ -1,7 +1,4 @@
-"use client";
-
-import { useEffect, useRef, useState } from "react";
-import { motion, useScroll, useTransform } from "motion/react";
+import { cn } from "tailwind-variants";
 
 type AnimatedXSnakePathProps = {
   size?: number;
@@ -15,53 +12,48 @@ export const AnimatedXSnakePath: React.FC<AnimatedXSnakePathProps> = ({
   size,
   className,
 }) => {
-  const svgRef = useRef<SVGSVGElement>(null);
-  const pathRef = useRef<SVGPathElement>(null);
-  const [pathLength, setPathLength] = useState(0);
-
-  useEffect(() => {
-    if (pathRef.current) {
-      setPathLength(pathRef.current.getTotalLength());
-    }
-  }, []);
-
-  const { scrollYProgress } = useScroll({
-    target: svgRef as unknown as React.RefObject<HTMLElement>,
-    offset: ["start center", "end center"],
-  });
-
-  const dashOffset = useTransform(scrollYProgress, [0, 1], [pathLength, 0]);
-
   return (
-    <motion.svg
-      ref={svgRef}
-      xmlns="http://www.w3.org/2000/svg"
-      xmlnsXlink="http://www.w3.org/1999/xlink"
-      xmlSpace="preserve"
-      style={{
-        fillRule: "evenodd",
-        clipRule: "evenodd",
-        strokeLinejoin: "round",
-        strokeMiterlimit: 2,
-      }}
-      viewBox="0 0 120 336"
-      overflow="visible"
-      width={size}
-      height={size}
-      fill="none"
-      stroke="currentColor"
-      strokeLinecap="round"
-      strokeWidth={2}
-      className={className}
-    >
-      <path d={PATH} stroke="currentColor" strokeOpacity={0.15} />
-      <motion.path
-        className="shadow-glow-sm"
-        ref={pathRef}
-        d={PATH}
-        strokeDasharray={pathLength}
-        strokeDashoffset={dashOffset}
-      />
-    </motion.svg>
+    <>
+      <style>{`
+          .x-snake-path {
+            stroke-dasharray: 1;
+            stroke-dashoffset: 1;
+
+            animation: draw linear;
+            animation-fill-mode: both;
+            animation-timeline: view();
+            animation-range: entry -50% cover 50%;
+          }
+
+          @keyframes draw {
+            to {
+              stroke-dashoffset: 0;
+            }
+          }
+        `}</style>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        xmlnsXlink="http://www.w3.org/1999/xlink"
+        xmlSpace="preserve"
+        style={{
+          fillRule: "evenodd",
+          clipRule: "evenodd",
+          strokeLinejoin: "round",
+          strokeMiterlimit: 2,
+        }}
+        viewBox="0 0 120 336"
+        overflow="visible"
+        width={size}
+        height={size}
+        fill="none"
+        stroke="currentColor"
+        strokeLinecap="round"
+        strokeWidth={2}
+        className={cn(className, "x-snake-svg")}
+      >
+        <path d={PATH} stroke="currentColor" strokeOpacity={0.15} />
+        <path className="shadow-glow-sm x-snake-path" d={PATH} pathLength={1} />
+      </svg>
+    </>
   );
 };
