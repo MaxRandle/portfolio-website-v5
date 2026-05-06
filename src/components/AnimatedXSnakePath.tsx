@@ -1,4 +1,5 @@
 import { cn } from "tailwind-variants";
+import styles from "./AnimatedXSnakePath.module.scss";
 
 type AnimatedXSnakePathProps = {
   size?: number;
@@ -14,23 +15,6 @@ export const AnimatedXSnakePath: React.FC<AnimatedXSnakePathProps> = ({
 }) => {
   return (
     <>
-      <style>{`
-          .x-snake-path {
-            stroke-dasharray: 1;
-            stroke-dashoffset: 1;
-
-            animation: draw linear;
-            animation-fill-mode: both;
-            animation-timeline: view();
-            animation-range: entry -50% cover 50%;
-          }
-
-          @keyframes draw {
-            to {
-              stroke-dashoffset: 0;
-            }
-          }
-        `}</style>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         xmlnsXlink="http://www.w3.org/1999/xlink"
@@ -52,7 +36,7 @@ export const AnimatedXSnakePath: React.FC<AnimatedXSnakePathProps> = ({
         className={cn(className, "x-snake-svg")}
       >
         <path d={PATH} stroke="currentColor" strokeOpacity={0.15} />
-        <path className="shadow-glow-sm x-snake-path" d={PATH} pathLength={1} />
+        <path className={cn("shadow-glow-sm", styles.xSnakePath)} d={PATH} pathLength={1} />
       </svg>
     </>
   );
