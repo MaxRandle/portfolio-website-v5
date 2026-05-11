@@ -4,6 +4,7 @@ import { TechStackSection } from "./TechStackSection";
 import { ROUTE_MAP } from "@config/index";
 import { ResumeLinkSection } from "./ResumeLinkSection";
 import { WorkSection } from "./WorkSection";
+import { ProjectsSection } from "./ProjectsSection";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
         <ResumeLinkSection />
         <WorkSection />
         <TechStackSection />
+        <ProjectsSection />
       </main>
     </>
   );
