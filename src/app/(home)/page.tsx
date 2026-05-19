@@ -15,7 +15,6 @@ export default function Home() {
         <ResumeLinkSection />
         <WorkSection />
         <TechStackSection />
-        <ProjectsSection />
       </main>
     </>
   );

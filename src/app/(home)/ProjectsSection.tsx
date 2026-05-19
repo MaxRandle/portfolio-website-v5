@@ -4,7 +4,7 @@ import { Section } from "@ui/Section";
 export const ProjectsSection: React.FC = () => {
   return (
     <Section spacing="lg">
-      <Container>gnrjdskgd</Container>
+      <Container>{/* To Do */}</Container>
     </Section>
   );
 };
