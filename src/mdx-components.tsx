@@ -1,0 +1,91 @@
+import type { MDXComponents } from "mdx/types";
+import { ColorPalette } from "@components/ColorPalette";
+import { Embed } from "@components/Embed";
+import { Heading, HeadingProps } from "@ui/Heading";
+import { Typography, TypographyProps } from "@ui/Typography";
+import { ExternalLink, ExternalLinkProps } from "@ui/Link";
+
+const components: MDXComponents = {
+  ColorPalette: ColorPalette,
+  Embed: Embed,
+  h1: (props: HeadingProps) => (
+    <Heading
+      className="mt-24 text-center print:mt-0 print:text-2xl"
+      level={"h1"}
+      {...props}
+    />
+  ),
+  h2: (props: HeadingProps) => (
+    <Heading
+      className="mt-16 print:mt-6 print:text-lg"
+      level={"h2"}
+      {...props}
+    />
+  ),
+  h3: (props: HeadingProps) => (
+    <Heading
+      className="mt-8 print:mt-2 print:text-sm"
+      level={"h3"}
+      {...props}
+    />
+  ),
+  p: (props: TypographyProps) => (
+    <Typography
+      className="mt-4 print:mt-2 print:text-xs"
+      level={"body"}
+      {...props}
+    />
+  ),
+  a: (props: ExternalLinkProps) => (
+    <ExternalLink
+      className="mt-4 print:mt-2 print:text-xs print:font-normal print:text-base-900 print:dark:text-base-500"
+      {...props}
+    />
+  ),
+  ol: (props) => (
+    <ol
+      className="mt-4 list-decimal space-y-2 print:mt-2 print:text-xs"
+      {...props}
+    />
+  ),
+  ul: (props) => (
+    <ul
+      className="mt-4 list-disc space-y-2 print:mt-2 print:space-y-1 print:text-xs"
+      {...props}
+    />
+  ),
+  li: (props) => (
+    <li
+      className="ml-12 space-x-2 text-base-900 dark:text-base-400 marker:text-base-900 marker:dark:text-base-500 print:ml-6"
+      {...props}
+    />
+  ),
+  pre: (props) => (
+    <pre
+      className="mt-4 print:mt-2 print:text-xs bg-base-300 dark:bg-base-1100 rounded-sm"
+      {...props}
+    />
+  ),
+  code: (props) => (
+    <code
+      className="bg-base-300 dark:bg-base-1000 rounded-md px-2"
+      {...props}
+    />
+  ),
+  hr: (props) => <hr className="mt-4 print:mt-2" {...props} />,
+  table: (props) => (
+    <table
+      className="mt-4 w-full text-base-900 dark:text-base-400 print:mt-2 print:text-xs"
+      {...props}
+    />
+  ),
+  thead: (props) => <thead className="text-lg" {...props} />,
+  tbody: (props) => <tbody {...props} />,
+  tr: (props) => <tr className="" {...props} />,
+  th: (props) => <th className="pl-4 first:pl-0 print:text-xs" {...props} />,
+  td: (props) => <td className="pl-4 first:pl-0" {...props} />,
+};
+
+export function useMDXComponents(): MDXComponents {
+  return components;
+}
