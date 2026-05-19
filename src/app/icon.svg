@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 64 64" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+  <path
+    fill="#7864ff"
+    d="m0 0 20 32L0 64h20l12-20h-8l16-24h-8L20 0H0Z"
+  />
+  <path
+    fill="#7864ff"
+    d="M64 64 44 32 64 0H44L32 20h8L24 44h8l12 20h20Z"
+  />
+</svg>
