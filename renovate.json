@@ -1,0 +1,28 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": ["config:recommended"],
+  "minimumReleaseAge": "14 days",
+  "prConcurrentLimit": 50,
+  "packageRules": [
+    {
+      "matchUpdateTypes": ["patch"],
+      "enabled": false
+    },
+    {
+      "groupName": "react",
+      "matchPackageNames": ["react", "react-dom", "@types/react", "@types/react-dom"]
+    },
+    {
+      "groupName": "next",
+      "matchPackageNames": ["next", "eslint-config-next", "@next/mdx"]
+    },
+    {
+      "groupName": "turbo",
+      "matchPackageNames": ["turbo", "@turbo/gen", "eslint-config-turbo"]
+    },
+    {
+      "groupName": "mdx-js",
+      "matchPackagePatterns": ["^@mdx-js/"]
+    }
+  ]
+}
