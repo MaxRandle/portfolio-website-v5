@@ -19,6 +19,7 @@
   - `utils`
   - `ui`
   - `components`
+  - `forms`
 - Folders each have their own specification markdown documentation describing how to structure the files in each one.
 - Search for popular packages on npm to accomplish complex tasks, do not attempt hand-rolled solutions to common problems and requirements.
 

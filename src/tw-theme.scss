@@ -130,7 +130,7 @@ body {
     0 0 0 4px var(--focus-ring-color);
 
   @media (prefers-color-scheme: dark) {
-    --focus-ring-color: var(--color-primary-900);
+    --focus-ring-color: var(--color-primary-800);
     --focus-border-color: var(--color-primary-300);
     box-shadow: 0 0 6px 6px var(--focus-ring-color);
   }
@@ -148,7 +148,7 @@ body {
     0 0 0 4px var(--focus-ring-color);
 
   @media (prefers-color-scheme: dark) {
-    --focus-ring-color: var(--color-primary-900);
+    --focus-ring-color: var(--color-primary-800);
     --focus-border-color: var(--color-primary-300);
     box-shadow: 0 0 6px 6px var(--focus-ring-color);
   }

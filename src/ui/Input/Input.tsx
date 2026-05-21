@@ -26,7 +26,7 @@ const InputStyles = tv({
     "group-[&]/input-group:focus:relative",
     "group-[&]/input-group:rounded-none",
     "group-[&]/input-group:first:ml-0",
-    "group-[&]/input-group:-ml-[1px]",
+    "group-[&]/input-group:-ml-px",
     "group-[&]/input-group:first:rounded-l-lg",
     "group-[&]/input-group:last:rounded-r-lg",
   ],
@@ -34,14 +34,15 @@ const InputStyles = tv({
 
 type InputVariants = VariantProps<typeof InputStyles>;
 
-export type InputProps = React.ComponentPropsWithoutRef<"input"> & InputVariants;
+export type InputProps = React.ComponentPropsWithoutRef<"input"> &
+  InputVariants;
 
 export const Input = forwardRef<HTMLInputElement, InputProps>(
   ({ className, ...props }, ref) => {
     return (
       <input ref={ref} className={InputStyles({ className })} {...props} />
     );
-  }
+  },
 );
 
 Input.displayName = "Input";

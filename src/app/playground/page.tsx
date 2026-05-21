@@ -16,6 +16,7 @@ import { FiArrowLeft, FiArrowRight, FiPlus } from "react-icons/fi";
 import NavDemo from "@components/NavDemo";
 import { ColorPalette } from "@components/ColorPalette";
 import { AnimatedBrandLogoIcon } from "@components/AnimatedBrandLogoIcon";
+import { LoginForm } from "@forms/LoginForm";
 
 export default function Home() {
   return (
@@ -203,6 +204,12 @@ export default function Home() {
 
       <Section>
         <AnimatedBrandLogoIcon />
+      </Section>
+
+      <Section>
+        <Container>
+          <LoginForm />
+        </Container>
       </Section>
     </main>
   );
