@@ -23,6 +23,7 @@
       "@ui/*": ["./src/ui/*"],
       "@components/*": ["./src/components/*"],
       "@config/*": ["./src/config/*"],
+      "@utils/*": ["./src/utils/*"],
       "@forms/*": ["./src/forms/*"],
       "@src/*": ["./src/*"]
     }

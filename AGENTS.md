@@ -11,10 +11,15 @@
 
 ## Code style
 
+### Fundamental paradigms
+
 - You will not create code abstractions.
 - Simple, explicit, repeatable code is always preferred.
 - You will favour composability.
 - You will not create large multi-purpose files.
+
+### Specific rules
+
 - Files will be small and organised into one of these folders:
   - `utils`
   - `ui`
@@ -22,6 +27,8 @@
   - `forms`
 - Folders each have their own specification markdown documentation describing how to structure the files in each one.
 - Search for popular packages on npm to accomplish complex tasks, do not attempt hand-rolled solutions to common problems and requirements.
+- All promises are handled using the `tryCatch` utility `@utils/try-catch.ts`
+- The app router `"use client"` directive should not be used. If the requirement you're trying to solve would prescribe `"use client"`, push back on the requirement, even if it means sacrificing an ideal solution.
 
 ## Package documentation
 

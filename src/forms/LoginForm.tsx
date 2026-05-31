@@ -31,7 +31,11 @@ export const LoginForm: FC<GenericFormProps<FormValues>> = ({
   });
 
   return (
-    <form onSubmit={onSubmit ? handleSubmit(onSubmit) : undefined} {...props}>
+    <form
+      id="login-form"
+      onSubmit={onSubmit ? handleSubmit(onSubmit) : undefined}
+      {...props}
+    >
       <div>
         <label htmlFor="email">
           <Typography>Email</Typography>
@@ -58,7 +62,12 @@ export const LoginForm: FC<GenericFormProps<FormValues>> = ({
         {errors.password && <p>{errors.password.message}</p>}
         {onSubmitErrors?.password && <p>{onSubmitErrors.password.message}</p>}
       </div>
-      <Button className="mt-6" disabled={isSubmitting} type="submit">
+      <Button
+        className="mt-6"
+        disabled={isSubmitting}
+        type="submit"
+        form="login-form"
+      >
         Log in
       </Button>
     </form>
