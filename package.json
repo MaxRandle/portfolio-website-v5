@@ -22,7 +22,7 @@
     "react-hook-form": "^7.77.0",
     "react-icons": "^5.6.0",
     "rehype-pretty-code": "^0.14.3",
-    "sass": "^1.99.0",
+    "sass": "^1.100.0",
     "tailwind-variants": "^3.2.2",
     "zod": "^4.4.3"
   },
