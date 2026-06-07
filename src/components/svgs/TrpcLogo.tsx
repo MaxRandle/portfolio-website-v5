@@ -1,4 +1,4 @@
-import React, { forwardRef, JSX } from "react";
+import { forwardRef, JSX } from "react";
 
 type TrpcLogoProps = JSX.IntrinsicElements["svg"] & {
   size?: number;

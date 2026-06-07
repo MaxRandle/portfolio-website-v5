@@ -1,4 +1,4 @@
-import React, { forwardRef, JSX } from "react";
+import { forwardRef, JSX } from "react";
 
 type FramerLogoProps = JSX.IntrinsicElements["svg"] & {
   size?: number;
@@ -27,7 +27,7 @@ export const FramerLogo = forwardRef<SVGSVGElement, FramerLogoProps>(
         <path d="M0 0h14v7H7zm0 7h7l7 7H7v7l-7-7z" />
       </svg>
     );
-  }
+  },
 );
 
 FramerLogo.displayName = "FramerLogo";
