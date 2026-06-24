@@ -1,74 +1,56 @@
 # UI Component Specification
 
-This document outlines the established patterns, conventions, and standards for UI components in this design system.
+Established patterns and conventions for this design system. Components must be usable as server components and therefore must not use state or hooks.
 
-## Core Architecture
+## Technology Stack
 
-### Technology Stack
+- **React**: Functional components with `forwardRef`
+- **TypeScript**: Strict typing throughout
+- **Tailwind CSS + Tailwind Variants**: Utility-first styling with variant management
+- **Next.js**: Framework integration (Image, Link)
 
-- **React**: Functional components with hooks
-- **TypeScript**: Full type safety with strict typing
-- **Tailwind CSS**: Utility-first styling
-- **Tailwind Variants**: Component variant management
-- **Next.js**: Framework integration (Image, Link components)
-
-### Component Structure
-
-All components follow a consistent file structure:
+## File Structure
 
 ```
 ComponentName/
-├── ComponentName.tsx     # Main component implementation
-├── ComponentGroup.tsx    # Optional: Group/container variant
-├── ComponentContainer.tsx # Optional: Container wrapper
-└── index.ts             # Barrel exports
+├── ComponentName.tsx      # Main implementation
+├── ComponentGroup.tsx     # Optional: group/container variant
+├── ComponentContainer.tsx # Optional: container wrapper
+└── index.ts               # Barrel exports
 ```
 
 ## TypeScript Patterns
 
-### Import Structure
-
 ```typescript
-import React, { forwardRef, JSX } from "react";
+import React, { forwardRef } from "react";
 import { tv, type VariantProps } from "tailwind-variants";
-// Additional imports (Next.js components, icons, etc.)
-```
 
-### Type Definitions
-
-```typescript
-// 1. Define styles with tailwind-variants
 const ComponentStyles = tv({
   base: "base-classes",
   variants: {
-    /* variant definitions */
+    variantName: {
+      option1: "classes-for-option1",
+      option2: ["multiple", "classes"],
+    },
   },
   defaultVariants: {
-    /* defaults */
+    variantName: "option1",
   },
 });
 
-// 2. Extract variant types
 type ComponentVariants = VariantProps<typeof ComponentStyles>;
 
-// 3. Define component props
 export type ComponentProps = React.ComponentPropsWithoutRef<"element"> &
   ComponentVariants;
 ```
 
-### Prop Type Patterns
-
-- **Base Element**: Extend `React.ComponentPropsWithoutRef<"element">` for the underlying HTML element
-- **Variants**: Use `VariantProps<typeof ComponentStyles>` for styling variants
-- **Required Props**: Use `Required<Pick<Type, "prop">>` for mandatory variant props
-- **Custom Props**: Add component-specific props with JSDoc documentation
-- **Omit Conflicts**: Use `Omit<BaseType, "conflictingProp">` when needed
+Prop type notes:
+- Extend `React.ComponentPropsWithoutRef<"element">` for the underlying HTML element
+- Use `Required<Pick<Type, "prop">>` for mandatory variant props
+- Use `Omit<BaseType, "conflictingProp">` to resolve conflicts
+- Document custom props with JSDoc
 
 ## Component Implementation
-
-### forwardRef Pattern
-
-All components use `forwardRef` for proper ref forwarding:
 
 ```typescript
 export const Component = forwardRef<HTMLElementType, ComponentProps>(
@@ -86,35 +68,11 @@ export const Component = forwardRef<HTMLElementType, ComponentProps>(
 Component.displayName = "Component";
 ```
 
-### Key Patterns
+Destructure variant props first, always pass `className` to the variant function, spread `...props` for HTML attribute passthrough, and set `displayName`.
 
-- **Destructure variants first**: Extract styling variants before spreading remaining props
-- **Always include className**: Allow className override in variant function
-- **Spread remaining props**: Use `{...props}` for HTML attribute passthrough
-- **Set displayName**: Required for debugging and dev tools
+## Styling
 
-## Styling with Tailwind Variants
-
-### Variant Definition Structure
-
-```typescript
-const ComponentStyles = tv({
-  base: ["base-classes", "group-specific-classes"],
-  variants: {
-    variantName: {
-      option1: "classes-for-option1",
-      option2: ["multiple", "classes", "for-option2"],
-    },
-  },
-  defaultVariants: {
-    variantName: "option1",
-  },
-});
-```
-
-### Variant Documentation
-
-Use JSDoc comments for variant documentation:
+### Variant JSDoc
 
 ```typescript
 variants: {
@@ -122,15 +80,11 @@ variants: {
    * @summary Brief description of what this variant controls
    * @default "defaultValue"
    */
-  variantName: {
-    // variant options
-  },
+  variantName: { /* options */ },
 }
 ```
 
-### Group Styling Pattern
-
-Components that work within groups use Tailwind's group modifier:
+### Group Modifiers
 
 ```typescript
 base: [
@@ -141,165 +95,86 @@ base: [
 ];
 ```
 
-### Dark Mode Support
-
-All components include dark mode variants:
+### Dark Mode & State Variants
 
 ```typescript
+// Dark mode
 "text-base-900 bg-base-100 border-base-400",
 "dark:text-base-400 dark:bg-base-1200 dark:border-base-1000",
-```
 
-### State Variants
-
-Handle interactive states consistently:
-
-```typescript
-// Hover states
+// Hover / focus / disabled / invalid
 "hover:bg-primary-700 hover:border-primary-700",
-
-// Focus states
 "focus:ring-active focus:border-white",
-
-// Disabled states
 "disabled:opacity-60 disabled:pointer-events-none",
-
-// Invalid states
 "invalid:text-danger-900 invalid:bg-danger-100",
 ```
 
 ## Component Variants
 
-### Link Variants
-
-Components that can render as links follow this pattern:
+### Link Variant
 
 ```typescript
-export type ComponentLinkProps = React.ComponentPropsWithoutRef<typeof NextLink> & ComponentVariants;
+export type ComponentLinkProps = React.ComponentPropsWithoutRef<typeof NextLink> &
+  ComponentVariants;
 
 export const ComponentLink = forwardRef<
   React.ComponentRef<typeof NextLink>,
   ComponentLinkProps
->(({ className, variant1, variant2, ...props }, ref) => {
-  return (
-    <NextLink
-      ref={ref}
-      className={ComponentLinkStyles({ variant1, variant2, className })}
-      {...props}
-    />
-  );
-});
+>(({ className, variant1, variant2, ...props }, ref) => (
+  <NextLink
+    ref={ref}
+    className={ComponentLinkStyles({ variant1, variant2, className })}
+    {...props}
+  />
+));
 ```
 
-### Group/Container Components
-
-Group components provide context for child components:
+### Group/Container
 
 ```typescript
-const GroupStyles = tv({
-  base: "group/component-group flex", // Note the group naming
-});
+const GroupStyles = tv({ base: "group/component-group flex" });
 
 export const ComponentGroup = forwardRef<HTMLDivElement, ComponentGroupProps>(
-  ({ className, ...props }, ref) => {
-    return (
-      <div ref={ref} className={GroupStyles({ className })} {...props} />
-    );
-  }
+  ({ className, ...props }, ref) => (
+    <div ref={ref} className={GroupStyles({ className })} {...props} />
+  )
 );
 ```
 
 ## Polymorphic Components
 
-For components that can render as different HTML elements:
-
 ```typescript
 export type ComponentProps = React.ComponentPropsWithoutRef<"h1"> &
   ComponentVariants & {
-    /**
-     * @summary informs the dom type.
-     * @default "h3"
-     */
-    as?: "h3" | "h2" | "h1";
+    /** @default "h3" */
+    as?: "h1" | "h2" | "h3";
   };
 
 export const Component = forwardRef<HTMLHeadingElement, ComponentProps>(
-  ({ level = "h3", as, className, ...props }, ref) => {
-    const Element = as ?? level;
-
+  ({ as = "h3", className, ...props }, ref) => {
+    const Element = as;
     return (
-      <Element
-        ref={ref}
-        className={ComponentStyles({ level, className })}
-        {...props}
-      />
+      <Element ref={ref} className={ComponentStyles({ as, className })} {...props} />
     );
   }
 );
 ```
 
-## Export Patterns
-
-### Index Files
-
-Use barrel exports in `index.ts` files:
+## Exports
 
 ```typescript
+// index.ts
 export * from "./Component";
 export * from "./ComponentGroup";
 export * from "./ComponentContainer";
 ```
 
-### File Extensions
+Use `.tsx` for component files, `.ts` for index/utility files.
 
-- `.tsx` for component files
-- `.ts` for index/utility files
+## Naming & Accessibility
 
-## Best Practices
-
-### Naming Conventions
-
-- **Components**: PascalCase (`Button`, `AvatarGroup`)
-- **Props**: camelCase with descriptive names
-- **Variants**: camelCase, semantic names (`intent`, `size`, `palette`)
-- **CSS Classes**: Follow Tailwind conventions
-
-### Documentation
-
-- Use JSDoc for prop documentation
-- Include `@summary` for variant descriptions
-- Specify `@default` values for variants
-- Document custom props with clear descriptions
-
-### Accessibility
-
-- Always forward refs for proper focus management
-- Use semantic HTML elements as base
-- Include proper ARIA attributes when needed
-- Support keyboard navigation patterns
-
-### Performance
-
-- Use `forwardRef` for all components
-- Leverage Tailwind's purging for optimal bundle size
-- Avoid inline styles, prefer Tailwind classes
-- Use `React.memo` only when necessary
-
-### Error Handling
-
-- Provide sensible defaults for all variants
-- Use TypeScript for compile-time error prevention
-- Handle edge cases gracefully (missing images, etc.)
-
-## Common Patterns Summary
-
-1. **Consistent file structure** with component + index files
-2. **forwardRef** for all components with proper typing
-3. **Tailwind Variants** for styling with JSDoc documentation
-4. **Group context** support via Tailwind group modifiers
-5. **Dark mode** support for all visual components
-6. **Link variants** for interactive components
-7. **Polymorphic support** where semantically appropriate
-8. **Barrel exports** for clean imports
-9. **TypeScript strict mode** with comprehensive typing
-10. **Semantic HTML** with accessibility considerations
+- Components: PascalCase
+- Props/variants: camelCase, semantic names (`intent`, `size`, `palette`)
+- Use semantic HTML elements as the base element
+- Forward refs for proper focus management
+- Include ARIA attributes where needed
