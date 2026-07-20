@@ -71,7 +71,8 @@ const ButtonStyles = tv({
 
 type ButtonVariants = VariantProps<typeof ButtonStyles>;
 
-export type ButtonProps = React.ComponentPropsWithoutRef<"button"> & ButtonVariants;
+export type ButtonProps = React.ComponentPropsWithoutRef<"button"> &
+  ButtonVariants;
 
 export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
   ({ className, intent, size, disabled, ...props }, ref) => {
@@ -83,7 +84,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
         {...props}
       />
     );
-  }
+  },
 );
 
 Button.displayName = "Button";

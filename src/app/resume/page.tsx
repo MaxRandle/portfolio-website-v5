@@ -127,6 +127,24 @@ export default function Home() {
               <ul className="list-disc ml-8">
                 <li>
                   <Typography level="caption">
+                    Provide critical engineering support for a large supermarket
+                    chain's membership platform launch, facilitating 500,000+
+                    customer signups within the first two weeks. Ship urgent
+                    production fixes and rapidly implement changes to meet
+                    unforeseen requirements under intense, high-traffic launch
+                    conditions.
+                  </Typography>
+                </li>
+                <li>
+                  <Typography level="caption">
+                    Eager contributor to research and evaluation of agentic
+                    engineering workflows, presenting comparative analysis of
+                    competing approaches to the wider agency as we prepare to
+                    adopt them into client projects.
+                  </Typography>
+                </li>
+                <li>
+                  <Typography level="caption">
                     Improve checkout experience for large supermarket eCommerce
                     platforms serving tens of thousands of customers daily.
                   </Typography>
