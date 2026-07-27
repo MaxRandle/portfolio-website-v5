@@ -66,29 +66,32 @@ export default function Home() {
               <Divider />
 
               <Typography>
-                Senior Front End Engineer with 7+ years experience delivering
-                robust web applications for high stakes, high traffic platforms.
+                I am a Senior Front End Engineer with 8 years of experience
+                delivering robust web applications for high stakes, high traffic
+                platforms.
               </Typography>
 
               <Typography>
-                A forward-thinker who anticipates blockers and communicates them
-                early.
-              </Typography>
-
-              <Typography>
-                Thrives in cross-functional teams, bridging the gap between
+                I thrive in cross-functional teams, bridging the gap between
                 design and engineering with strong UI/UX fundamentals, semantic
                 HTML, and accessibility.
               </Typography>
 
               <Typography>
-                Proven ability to embed quickly into client environments, build
-                trust, and balance technical quality with delivery commitments.
+                I have proven ability to embed quickly into client environments,
+                build trust, and balance technical quality with delivery
+                commitments.
               </Typography>
 
               <Typography>
-                Active in developer communities with a pragmatic eye for modern
-                tooling.
+                I actively participate in developer communities with a pragmatic
+                eye for modern tooling.
+              </Typography>
+
+              <Typography>
+                I have a true passion for my craft, I am continually upskilling
+                myself and working on personal projects. I enjoy educating
+                others and team knowledge sharing.
               </Typography>
             </div>
 
@@ -104,10 +107,10 @@ export default function Home() {
               </Typography>
 
               <Typography>
-                I have very strong proficiency with these technologies as they
-                comprise the majority of my technical experience. Outside of
-                this I have a strong general understanding of modern web
-                development and peripheral tools across the full stack.
+                I have proven enterprise scale expertise with these technologies
+                as they comprise the majority of my technical experience. Beyond
+                my core stack, I have a deep understanding of modern web
+                development and peripheral tools across the board.
               </Typography>
             </div>
 
@@ -116,7 +119,7 @@ export default function Home() {
 
               <Divider />
 
-              <Heading level="h3">Senior Front end Software Engineer</Heading>
+              <Heading level="h3">Senior Front End Software Engineer</Heading>
               <Typography>
                 <strong>AKQA</strong> • Auckland • April 2025 - Present
               </Typography>
@@ -222,7 +225,7 @@ export default function Home() {
                 <li>
                   <Typography level="caption">
                     Create and manage comprehensive developer guide and API
-                    documentation including self-validating Openapi spec with
+                    documentation including self-validating OpenAPI spec with
                     embedded examples.
                   </Typography>
                 </li>
@@ -248,7 +251,7 @@ export default function Home() {
 
               <Divider />
 
-              <Heading level="h3">Front end Software Engineer</Heading>
+              <Heading level="h3">Front End Software Engineer</Heading>
               <Typography>
                 <strong>Lendable</strong> • London, UK • May 2023 - May 2024
               </Typography>
@@ -277,7 +280,7 @@ export default function Home() {
                 <li>
                   <Typography level="caption">
                     Share skills and knowledge with team members by being an
-                    active participant in Front-End Guild events.
+                    active participant in Front End Guild events.
                   </Typography>
                 </li>
                 <li>
@@ -294,14 +297,14 @@ export default function Home() {
                     activities while transitioning between ATS providers.
                     Demonstrated exceptional initiative and skill delivering a
                     high-quality and brand consistent UI under tight deadlines
-                    and without designed input.
+                    and without design input.
                   </Typography>
                 </li>
               </ul>
 
               <Divider />
 
-              <Heading level="h3">Front end Software Engineer</Heading>
+              <Heading level="h3">Front End Software Engineer</Heading>
               <Typography>
                 <strong>Kernel Wealth</strong> • Auckland, NZ • March 2022 -
                 March 2023
@@ -348,9 +351,9 @@ export default function Home() {
                 </li>
                 <li>
                   <Typography level="caption">
-                    Ensured data-driven decision by developing A/B testing
-                    capabilities to assist with validating assumptions about
-                    user behaviour.
+                    Ensured data-driven decision making by developing A/B
+                    testing capabilities to assist with validating assumptions
+                    about user behaviour.
                   </Typography>
                 </li>
                 <li>
@@ -365,7 +368,7 @@ export default function Home() {
 
               <Heading level="h3">Full stack Software Engineer</Heading>
               <Typography>
-                <strong>Renti Ltd</strong> • Auckland, NZ • Aug 2021 - Nov 2022
+                <strong>Renti Ltd</strong> • Auckland, NZ • Aug 2021 - Nov 2021
               </Typography>
               <Typography>
                 React | Next | Node | Express | MongoDB | GraphQL | Sass
@@ -375,7 +378,7 @@ export default function Home() {
                 <li>
                   <Typography level="caption">
                     Transformed designs into functional React components. Set up
-                    pages with SSR to ensured fluid user experience with flows,
+                    pages with SSR to ensure fluid user experience with flows,
                     forms and other functional elements.
                   </Typography>
                 </li>
@@ -397,9 +400,9 @@ export default function Home() {
 
               <Divider />
 
-              <Heading level="h3">Front end and Automation Engineer</Heading>
+              <Heading level="h3">Front End and Automation Engineer</Heading>
               <Typography>
-                <strong>Probity consulting</strong> • Auckland, NZ • Jul 2018 -
+                <strong>Probity Consulting</strong> • Auckland, NZ • Jul 2018 -
                 Sept 2020
               </Typography>
               <Typography>
