@@ -366,7 +366,7 @@ export default function Home() {
                 </li>
                 <li>
                   <Typography level="caption">
-                    Built the front-end measurement layer — Mixpanel event
+                    Built the front-end measurement layer, Mixpanel event
                     tracking, FullStory session replay, and bespoke A/B testing
                     capability to validate assumptions about user behaviour.
                   </Typography>
