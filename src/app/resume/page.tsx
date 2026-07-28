@@ -66,29 +66,15 @@ export default function Home() {
               <Divider />
 
               <Typography>
-                Senior Front End Engineer with 7+ years experience delivering
-                robust web applications for high stakes, high traffic platforms.
-              </Typography>
-
-              <Typography>
-                A forward-thinker who anticipates blockers and communicates them
-                early.
-              </Typography>
-
-              <Typography>
-                Thrives in cross-functional teams, bridging the gap between
+                Senior Front End Engineer with 8 years of experience building
+                web applications across retail, lending, and wealth management,
+                including platforms serving hundreds of thousands of customers.
+                I thrive in cross-functional teams, bridging the gap between
                 design and engineering with strong UI/UX fundamentals, semantic
-                HTML, and accessibility.
-              </Typography>
-
-              <Typography>
-                Proven ability to embed quickly into client environments, build
-                trust, and balance technical quality with delivery commitments.
-              </Typography>
-
-              <Typography>
-                Active in developer communities with a pragmatic eye for modern
-                tooling.
+                HTML, and accessibility. Comfortable owning back-end work when a
+                feature calls for it. Proven ability to embed quickly into
+                client environments, build trust, and balance technical quality
+                with delivery commitments.
               </Typography>
             </div>
 
@@ -97,26 +83,64 @@ export default function Home() {
 
               <Divider />
 
-              <Typography>
-                <strong>
-                  TypeScript • React • Next • Sass • TailwindCSS • Node
-                </strong>
-              </Typography>
+              {/* <div className="grid gap-y-1 gap-x-6 grid-cols-1 sm:grid-cols-[auto_1fr]">
+                <Typography level="caption">
+                  <strong>Core</strong>
+                </Typography>
+                <Typography level="caption">
+                  TypeScript • React • Next • Node
+                </Typography>
 
-              <Typography>
-                I have very strong proficiency with these technologies as they
-                comprise the majority of my technical experience. Outside of
-                this I have a strong general understanding of modern web
-                development and peripheral tools across the full stack.
+                <Typography level="caption" className="mt-3 sm:mt-0">
+                  <strong>Styling</strong>
+                </Typography>
+                <Typography level="caption">
+                  TailwindCSS • Sass • VanillaExtract
+                </Typography>
+
+                <Typography level="caption" className="mt-3 sm:mt-0">
+                  <strong>Data & APIs</strong>
+                </Typography>
+                <Typography level="caption">
+                  GraphQL • REST • OpenAPI • Express • MongoDB
+                </Typography>
+
+                <Typography level="caption" className="mt-3 sm:mt-0">
+                  <strong>Testing</strong>
+                </Typography>
+                <Typography level="caption">
+                  Playwright • React Testing Library • Jest
+                </Typography>
+
+                <Typography level="caption" className="mt-3 sm:mt-0">
+                  <strong>Tooling</strong>
+                </Typography>
+                <Typography level="caption">
+                  Vercel • GitHub Actions • Headless CMS
+                </Typography>
+
+                <Typography level="caption" className="mt-3 sm:mt-0">
+                  <strong>Practice</strong>
+                </Typography>
+                <Typography level="caption">
+                  Accessibility (WCAG) • Semantic HTML • Design systems
+                </Typography>
+              </div> */}
+
+              <Typography level="subheading">
+                TypeScript • React • Next • Node • TailwindCSS • Sass •
+                VanillaExtract • GraphQL • REST • OpenAPI • Express • MongoDB •
+                Playwright • React Testing Library • Jest • Vercel • GitHub
+                Actions • Headless CMS • Accessibility (WCAG) • Semantic HTML •
+                Design systems
               </Typography>
             </div>
-
             <div className="mt-12 space-y-3">
               <Heading level="h2">Work experience</Heading>
 
               <Divider />
 
-              <Heading level="h3">Senior Front end Software Engineer</Heading>
+              <Heading level="h3">Senior Front End Software Engineer</Heading>
               <Typography>
                 <strong>AKQA</strong> • Auckland • April 2025 - Present
               </Typography>
@@ -127,41 +151,18 @@ export default function Home() {
               <ul className="list-disc ml-8">
                 <li>
                   <Typography level="caption">
-                    Provide critical engineering support for a large supermarket
-                    chain's membership platform launch, facilitating 500,000+
-                    customer signups within the first two weeks. Ship urgent
-                    production fixes and rapidly implement changes to meet
-                    unforeseen requirements under intense, high-traffic launch
-                    conditions.
+                    Provide engineering support for a large supermarket chain's
+                    membership platform launch, facilitating 500,000+ customer
+                    signups within the first two weeks. Ship urgent production
+                    fixes and rapidly implement changes to meet unforeseen
+                    requirements under intense, high-traffic launch conditions.
                   </Typography>
                 </li>
                 <li>
                   <Typography level="caption">
-                    Eager contributor to research and evaluation of agentic
-                    engineering workflows, presenting comparative analysis of
-                    competing approaches to the wider agency as we prepare to
-                    adopt them into client projects.
-                  </Typography>
-                </li>
-                <li>
-                  <Typography level="caption">
-                    Improve checkout experience for large supermarket eCommerce
-                    platforms serving tens of thousands of customers daily.
-                  </Typography>
-                </li>
-                <li>
-                  <Typography level="caption">
-                    Collaborate closely with designers and product owners to
-                    refine features, and actively contribute to sprint and
-                    quarterly planning to ensure work is well defined,
-                    appropriately scoped, and aligned with delivery timelines.
-                  </Typography>
-                </li>
-                <li>
-                  <Typography level="caption">
-                    Partner with back-end engineers during technical planning to
-                    design API contracts and map front-end/back-end
-                    interactions, ensuring alignment before implementation.
+                    Embed as the sole AKQA engineer within an established
+                    in-client squad, quickly building trust and becoming a key
+                    contributor in team ceremonies and technical decisions.
                   </Typography>
                 </li>
                 <li>
@@ -175,133 +176,148 @@ export default function Home() {
                 <li>
                   <Typography level="caption">
                     Drive alignment across QA discipline by advocating for a
-                    streamlined testing strategy, reducing fragile end-to-end
-                    tests that blocked deployments and refocusing efforts on
+                    streamlined testing strategy, reducing fragile Playwright
+                    suites that blocked deployments and refocusing efforts on
                     meaningful happy-path coverage.
                   </Typography>
                 </li>
                 <li>
                   <Typography level="caption">
-                    Champion continuous refactoring of tightly-coupled checkout
-                    components, extracting reusable UI components and utility
-                    functions to improve maintainability and reduce cost of
-                    change for future feature work.
+                    Research and evaluate agentic engineering workflows,
+                    presenting comparative analysis of competing approaches to
+                    the wider agency ahead of adoption on client projects.
+                  </Typography>
+                </li>
+                <li>
+                  <Typography level="caption">
+                    Champion continuous refactoring of tightly-coupled
+                    components in a checkout serving tens of thousands of
+                    customers daily, extracting reusable UI and utilities to
+                    reduce cost of change.
                   </Typography>
                 </li>
                 <li>
                   <Typography level="caption">
                     Identify and remediate critical accessibility failures
-                    across eCommerce sites during downtime, including unusable
-                    navigation and missing skip-to-content links.
+                    across eCommerce sites, including unusable navigation and
+                    missing skip-to-content links.
                   </Typography>
                 </li>
                 <li>
                   <Typography level="caption">
-                    Embed as the sole AKQA engineer within an established
-                    in-client squad, quickly building trust and becoming a key
-                    contributor in team ceremonies and technical decisions.
+                    Partner with back-end engineers during technical planning to
+                    design API contracts and map front-end/back-end
+                    interactions, ensuring alignment before implementation.
                   </Typography>
                 </li>
               </ul>
 
               <Divider />
 
-              <Heading level="h3">Back end freelance project</Heading>
+              <Heading level="h3">Back End Engineer (Freelance)</Heading>
               <Typography>
                 <strong>GuChat</strong> • Remote • August 2024 - February 2025
               </Typography>
-              <Typography>TypeScript | Node | Express</Typography>
+              <Typography>TypeScript | Node | Express | OpenAPI</Typography>
 
               <ul className="list-disc ml-8">
                 <li>
                   <Typography level="caption">
-                    Design and build ultra low latency public facing api for
-                    gamified telegram applet.
+                    Sole engineer on a public-facing API for a gamified Telegram
+                    applet, keeping the service small and decoupled from
+                    surrounding systems to hold a sub 100ms response time.
                   </Typography>
                 </li>
                 <li>
                   <Typography level="caption">
-                    Create and manage comprehensive developer guide and API
-                    documentation including self-validating Openapi spec with
+                    Generated a self-validating OpenAPI spec directly from the
+                    API source code so it was always guaranteed to match the
+                    implementation, maintained alongside a developer guide with
                     embedded examples.
                   </Typography>
                 </li>
                 <li>
                   <Typography level="caption">
-                    Upskill engineering team by introducing modern type safety
-                    and code generation techniques.
+                    Established end-to-end type safety by having the applet
+                    generate its client types from that spec, upskilling a
+                    separate contractor team on the code generation techniques
+                    involved.
                   </Typography>
                 </li>
                 <li>
                   <Typography level="caption">
-                    Understand client ecosystem and goals in order to elicit
-                    true requirements directly from client.
-                  </Typography>
-                </li>
-                <li>
-                  <Typography level="caption">
-                    Give technical presentations to assist client with choosing
-                    the best approach.
+                    Worked directly with the client to translate business goals
+                    into technical requirements, presenting options and
+                    trade-offs to support decisions on approach.
                   </Typography>
                 </li>
               </ul>
 
               <Divider />
 
-              <Heading level="h3">Front end Software Engineer</Heading>
+              <Heading level="h3">Front End Software Engineer</Heading>
               <Typography>
-                <strong>Lendable</strong> • London, UK • May 2023 - May 2024
+                <strong>Lendable</strong> (consumer lending) • London, UK • May
+                2023 - May 2024
               </Typography>
               <Typography>TypeScript | React | Next | Sass</Typography>
 
               <ul className="list-disc ml-8">
                 <li>
                   <Typography level="caption">
-                    Improve product flexibility and reduce cost of change by
-                    taking proactive approach to modernising and simplifying a
-                    complex and neglected codebase.
+                    Modularised core UI components in a codebase left unstable
+                    by an abandoned CSS migration, with pervasive overrides,
+                    element-level styles, and long-running production incidents.
+                    Introduced automated visual regression testing and made CSS
+                    inheritance maps to identify entrypoints for refactoring,
+                    giving the business the technical capability to take on a
+                    new whitelabel contract that the previous architecture could
+                    not have delivered.
                   </Typography>
                 </li>
                 <li>
                   <Typography level="caption">
-                    Reduce customer onboarding steps and increase conversion
-                    rate by implementing OpenBanking integration.
-                  </Typography>
-                </li>
-                <li>
-                  <Typography level="caption">
-                    Increase customer safety by adding scam prevention features
-                    to the application flow.
-                  </Typography>
-                </li>
-                <li>
-                  <Typography level="caption">
-                    Share skills and knowledge with team members by being an
-                    active participant in Front-End Guild events.
-                  </Typography>
-                </li>
-                <li>
-                  <Typography level="caption">
-                    Streamline inter-disciplinary collaboration by reviving an
-                    API spec, and adopting tools to generate TypeScript types
-                    from it.
+                    Restored an outdated and unmaintained API spec by
+                    reverse-engineering it from back-end source, then
+                    established a standard requiring spec changes alongside API
+                    changes. Made the spec a reliable contract between front-end
+                    and back-end teams, and adopted tooling to generate
+                    TypeScript types from it.
                   </Typography>
                 </li>
                 <li>
                   <Typography level="caption">
                     Led the rapid development and deployment of a custom static
                     careers site, ensuring zero downtime in recruitment
-                    activities while transitioning between ATS providers.
-                    Demonstrated exceptional initiative and skill delivering a
-                    high-quality and brand consistent UI under tight deadlines
-                    and without designed input.
+                    activities while transitioning between ATS providers,
+                    delivering a brand-consistent UI under a tight deadline and
+                    without design input.
+                  </Typography>
+                </li>
+                <li>
+                  <Typography level="caption">
+                    Reduced customer onboarding steps by implementing
+                    OpenBanking integration.
+                  </Typography>
+                </li>
+                <li>
+                  <Typography level="caption">
+                    Increased customer safety by adding scam prevention features
+                    to the application flow.
+                  </Typography>
+                </li>
+                <li>
+                  <Typography level="caption">
+                    Presented regularly at Front End Guild sessions and
+                    personally recruited engineers from across the business to
+                    attend, roughly doubling regular attendance.
                   </Typography>
                 </li>
               </ul>
 
               <Divider />
 
-              <Heading level="h3">Front end Software Engineer</Heading>
+              <Heading level="h3">Front End Software Engineer</Heading>
               <Typography>
                 <strong>Kernel Wealth</strong> • Auckland, NZ • March 2022 -
                 March 2023
@@ -313,50 +329,46 @@ export default function Home() {
               <ul className="list-disc ml-8">
                 <li>
                   <Typography level="caption">
+                    Translated rigorous Figma component specs into
+                    pixel-perfect, accessible, reusable React components,
+                    negotiating with designers during product shaping where more
+                    practical implementation alternatives existed.
+                  </Typography>
+                </li>
+                <li>
+                  <Typography level="caption">
+                    Shared ownership with one other front-end engineer of how
+                    the design system was structured in the codebase, including
+                    the mapping between code-level style variables and their
+                    Figma counterparts.
+                  </Typography>
+                </li>
+                <li>
+                  <Typography level="caption">
+                    Established software patterns for form handling and
+                    branching user flows, increasing flexibility, scalability,
+                    and maintainability across the product.
+                  </Typography>
+                </li>
+                <li>
+                  <Typography level="caption">
                     Built static marketing pages with content served from a
-                    headless CMS for an efficient and up-to-date user experience
-                    through the use of Incremental Static Regeneration.
+                    headless CMS, using Incremental Static Regeneration to keep
+                    content current without sacrificing performance.
                   </Typography>
                 </li>
                 <li>
                   <Typography level="caption">
-                    Improved software quality and stability by writing end to
-                    end tests and configuring a Bitbucket pipeline build step to
-                    run them.
+                    Wrote end-to-end Playwright tests and configured a Bitbucket
+                    pipeline build step to run them, improving release
+                    stability.
                   </Typography>
                 </li>
                 <li>
                   <Typography level="caption">
-                    Precisely translated designs into clean, accessible,
-                    agnostic React components that adhere to a strict component
-                    composition spec, resulting in a consistent user interface.
-                  </Typography>
-                </li>
-                <li>
-                  <Typography level="caption">
-                    Established software patterns that increased flexibility,
-                    scalability, and maintainability, such as form handling and
-                    branching user flows.
-                  </Typography>
-                </li>
-                <li>
-                  <Typography level="caption">
-                    Confer with designers to finalise features and address
-                    engineering considerations, resulting in a more user-centred
-                    product.
-                  </Typography>
-                </li>
-                <li>
-                  <Typography level="caption">
-                    Ensured data-driven decision by developing A/B testing
-                    capabilities to assist with validating assumptions about
-                    user behaviour.
-                  </Typography>
-                </li>
-                <li>
-                  <Typography level="caption">
-                    Enhanced user insights by integrating analytics tools into
-                    the front-end.
+                    Built the front-end measurement layer — Mixpanel event
+                    tracking, FullStory session replay, and bespoke A/B testing
+                    capability to validate assumptions about user behaviour.
                   </Typography>
                 </li>
               </ul>
@@ -365,7 +377,7 @@ export default function Home() {
 
               <Heading level="h3">Full stack Software Engineer</Heading>
               <Typography>
-                <strong>Renti Ltd</strong> • Auckland, NZ • Aug 2021 - Nov 2022
+                <strong>Renti Ltd</strong> • Auckland, NZ • Aug 2021 - Nov 2021
               </Typography>
               <Typography>
                 React | Next | Node | Express | MongoDB | GraphQL | Sass
@@ -374,32 +386,30 @@ export default function Home() {
               <ul className="list-disc ml-8">
                 <li>
                   <Typography level="caption">
-                    Transformed designs into functional React components. Set up
-                    pages with SSR to ensured fluid user experience with flows,
-                    forms and other functional elements.
+                    Worked on the React front end, using server-side rendering
+                    for multi-step flows and forms.
                   </Typography>
                 </li>
                 <li>
                   <Typography level="caption">
-                    Designed and built database schemas, API routes, and
-                    resolvers.
+                    Worked across the back end, building API routes and GraphQL
+                    resolvers against existing database schemas.
                   </Typography>
                 </li>
                 <li>
                   <Typography level="caption">
-                    Improved team productivity by leading sprint planning, story
-                    pointing, elaborating work and scoping MVP for new features,
-                    resulting in a more organised and focused development
-                    process.
+                    Shared responsibility for sprint planning, story pointing,
+                    work elaboration, and MVP scoping in a small team with no
+                    dedicated product role.
                   </Typography>
                 </li>
               </ul>
 
               <Divider />
 
-              <Heading level="h3">Front end and Automation Engineer</Heading>
+              <Heading level="h3">Front End and Automation Engineer</Heading>
               <Typography>
-                <strong>Probity consulting</strong> • Auckland, NZ • Jul 2018 -
+                <strong>Probity Consulting</strong> • Auckland, NZ • Jul 2018 -
                 Sept 2020
               </Typography>
               <Typography>
@@ -411,38 +421,26 @@ export default function Home() {
               <ul className="list-disc ml-8">
                 <li>
                   <Typography level="caption">
-                    Workshop with client to scope and build a functional web
-                    portal for truck drivers to manage shipping data, including
-                    complex forms, file upload/download, CRUD operations,
-                    authentication and user permissions.
+                    Workshopped directly with the client to scope and build a
+                    web portal for truck drivers to manage shipping data,
+                    covering complex forms, file upload/download, CRUD
+                    operations, authentication, and user permissions.
                   </Typography>
                 </li>
                 <li>
                   <Typography level="caption">
-                    Design, develop, and deploy automation solutions targeting
-                    large-scale ERP software applications. Example: Zespri
-                    shipping updates bot - UiPath, Orchestrator. Fully
-                    autonomous procedure which scraped data from external
-                    carrier websites, and entered data into SAP.
+                    Designed, built, and deployed automation solutions against
+                    large-scale ERP systems, including a fully autonomous UiPath
+                    bot for Zespri that scraped external carrier websites and
+                    entered shipping updates into SAP. Worked in secure
+                    government environments handling sensitive payroll and
+                    medical data.
                   </Typography>
                 </li>
                 <li>
                   <Typography level="caption">
-                    Worked with government agencies in secure environments and
-                    with sensitive data including payroll and medical.
-                  </Typography>
-                </li>
-                <li>
-                  <Typography level="caption">
-                    Business process re-engineering: Document current business
-                    process, extract underlying requirements, assess for
-                    improvement opportunities, and present to client.
-                  </Typography>
-                </li>
-                <li>
-                  <Typography level="caption">
-                    Conducting technical interviews, candidate selection, and
-                    training of junior staff.
+                    Conducted technical interviews and candidate selection, and
+                    trained junior staff.
                   </Typography>
                 </li>
               </ul>
