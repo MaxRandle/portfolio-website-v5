@@ -66,32 +66,14 @@ export default function Home() {
               <Divider />
 
               <Typography>
-                I am a Senior Front End Engineer with 8 years of experience
-                delivering robust web applications for high stakes, high traffic
-                platforms.
-              </Typography>
-
-              <Typography>
-                I thrive in cross-functional teams, bridging the gap between
-                design and engineering with strong UI/UX fundamentals, semantic
-                HTML, and accessibility.
-              </Typography>
-
-              <Typography>
-                I have proven ability to embed quickly into client environments,
-                build trust, and balance technical quality with delivery
-                commitments.
-              </Typography>
-
-              <Typography>
-                I actively participate in developer communities with a pragmatic
-                eye for modern tooling.
-              </Typography>
-
-              <Typography>
-                I have a true passion for my craft, I am continually upskilling
-                myself and working on personal projects. I enjoy educating
-                others and team knowledge sharing.
+                Senior Front End Engineer with 8 years of experience delivering
+                high-traffic web applications across retail, lending, and wealth
+                management. I thrive in cross-functional teams, bridging the gap
+                between design and engineering with strong UI/UX fundamentals,
+                semantic HTML, and accessibility. Comfortable owning Back End
+                work when a feature calls for it. Proven ability to embed
+                quickly into client environments, build trust, and balance
+                technical quality with delivery commitments.
               </Typography>
             </div>
 
