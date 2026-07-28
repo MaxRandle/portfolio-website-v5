@@ -66,14 +66,15 @@ export default function Home() {
               <Divider />
 
               <Typography>
-                Senior Front End Engineer with 8 years of experience delivering
-                high-traffic web applications across retail, lending, and wealth
-                management. I thrive in cross-functional teams, bridging the gap
-                between design and engineering with strong UI/UX fundamentals,
-                semantic HTML, and accessibility. Comfortable owning Back End
-                work when a feature calls for it. Proven ability to embed
-                quickly into client environments, build trust, and balance
-                technical quality with delivery commitments.
+                Senior Front End Engineer with 8 years of experience building
+                web applications for retail, lending, and wealth management
+                platforms that serve hundreds of thousands of customers. I
+                thrive in cross-functional teams, bridging the gap between
+                design and engineering with strong UI/UX fundamentals, semantic
+                HTML, and accessibility. Comfortable owning back-end work when a
+                feature calls for it. Proven ability to embed quickly into
+                client environments, build trust, and balance technical quality
+                with delivery commitments.
               </Typography>
             </div>
 
@@ -82,20 +83,58 @@ export default function Home() {
 
               <Divider />
 
-              <Typography>
-                <strong>
-                  TypeScript • React • Next • Sass • TailwindCSS • Node
-                </strong>
-              </Typography>
+              {/* <div className="grid gap-y-1 gap-x-6 grid-cols-1 sm:grid-cols-[auto_1fr]">
+                <Typography level="caption">
+                  <strong>Core</strong>
+                </Typography>
+                <Typography level="caption">
+                  TypeScript • React • Next • Node
+                </Typography>
 
-              <Typography>
-                I have proven enterprise scale expertise with these technologies
-                as they comprise the majority of my technical experience. Beyond
-                my core stack, I have a deep understanding of modern web
-                development and peripheral tools across the board.
+                <Typography level="caption" className="mt-3 sm:mt-0">
+                  <strong>Styling</strong>
+                </Typography>
+                <Typography level="caption">
+                  TailwindCSS • Sass • VanillaExtract
+                </Typography>
+
+                <Typography level="caption" className="mt-3 sm:mt-0">
+                  <strong>Data & APIs</strong>
+                </Typography>
+                <Typography level="caption">
+                  GraphQL • REST • OpenAPI • Express • MongoDB
+                </Typography>
+
+                <Typography level="caption" className="mt-3 sm:mt-0">
+                  <strong>Testing</strong>
+                </Typography>
+                <Typography level="caption">
+                  Playwright • React Testing Library • Jest
+                </Typography>
+
+                <Typography level="caption" className="mt-3 sm:mt-0">
+                  <strong>Tooling</strong>
+                </Typography>
+                <Typography level="caption">
+                  Vercel • GitHub Actions • Headless CMS
+                </Typography>
+
+                <Typography level="caption" className="mt-3 sm:mt-0">
+                  <strong>Practice</strong>
+                </Typography>
+                <Typography level="caption">
+                  Accessibility (WCAG) • Semantic HTML • Design systems
+                </Typography>
+              </div> */}
+
+              <Typography level="subheading">
+                TypeScript • React • Next • Node • TailwindCSS • Sass •
+                VanillaExtract • GraphQL • REST • OpenAPI • Express • MongoDB •
+                Playwright • React Testing Library • Jest • Vercel • GitHub
+                Actions • Headless CMS • Accessibility (WCAG) • Semantic HTML •
+                Design systems
               </Typography>
             </div>
-
             <div className="mt-12 space-y-3">
               <Heading level="h2">Work experience</Heading>
 
