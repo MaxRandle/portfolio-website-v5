@@ -257,51 +257,60 @@ export default function Home() {
 
               <Heading level="h3">Front End Software Engineer</Heading>
               <Typography>
-                <strong>Lendable</strong> • London, UK • May 2023 - May 2024
+                <strong>Lendable</strong> (consumer lending) • London, UK • May
+                2023 - May 2024
               </Typography>
               <Typography>TypeScript | React | Next | Sass</Typography>
 
               <ul className="list-disc ml-8">
                 <li>
                   <Typography level="caption">
-                    Improve product flexibility and reduce cost of change by
-                    taking proactive approach to modernising and simplifying a
-                    complex and neglected codebase.
+                    Modularised core UI components in a codebase left unstable
+                    by an abandoned CSS migration, with pervasive overrides,
+                    element-level styles, and long-running production incidents.
+                    Introduced automated visual regression testing and made CSS
+                    inheritance maps to identify entrypoints for refactoring,
+                    giving the business the technical capability to take on a
+                    new whitelabel contract that the previous architecture could
+                    not have delivered.
                   </Typography>
                 </li>
                 <li>
                   <Typography level="caption">
-                    Reduce customer onboarding steps and increase conversion
-                    rate by implementing OpenBanking integration.
-                  </Typography>
-                </li>
-                <li>
-                  <Typography level="caption">
-                    Increase customer safety by adding scam prevention features
-                    to the application flow.
-                  </Typography>
-                </li>
-                <li>
-                  <Typography level="caption">
-                    Share skills and knowledge with team members by being an
-                    active participant in Front End Guild events.
-                  </Typography>
-                </li>
-                <li>
-                  <Typography level="caption">
-                    Streamline inter-disciplinary collaboration by reviving an
-                    API spec, and adopting tools to generate TypeScript types
-                    from it.
+                    Restored an outdated and unmaintained API spec by
+                    reverse-engineering it from back-end source, then
+                    established a standard requiring spec changes alongside API
+                    changes. Made the spec a reliable contract between front-end
+                    and back-end teams, and adopted tooling to generate
+                    TypeScript types from it.
                   </Typography>
                 </li>
                 <li>
                   <Typography level="caption">
                     Led the rapid development and deployment of a custom static
                     careers site, ensuring zero downtime in recruitment
-                    activities while transitioning between ATS providers.
-                    Demonstrated exceptional initiative and skill delivering a
-                    high-quality and brand consistent UI under tight deadlines
-                    and without design input.
+                    activities while transitioning between ATS providers,
+                    delivering a brand-consistent UI under a tight deadline and
+                    without design input.
+                  </Typography>
+                </li>
+                <li>
+                  <Typography level="caption">
+                    Reduced customer onboarding steps by implementing
+                    OpenBanking integration.
+                  </Typography>
+                </li>
+                <li>
+                  <Typography level="caption">
+                    Increased customer safety by adding scam prevention features
+                    to the application flow.
+                  </Typography>
+                </li>
+                <li>
+                  <Typography level="caption">
+                    Presented regularly at Front End Guild sessions and
+                    personally recruited engineers from across the business to
+                    attend, roughly doubling regular attendance.
                   </Typography>
                 </li>
               </ul>
