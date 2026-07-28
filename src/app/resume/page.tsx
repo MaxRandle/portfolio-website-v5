@@ -67,9 +67,9 @@ export default function Home() {
 
               <Typography>
                 Senior Front End Engineer with 8 years of experience building
-                web applications for retail, lending, and wealth management
-                platforms that serve hundreds of thousands of customers. I
-                thrive in cross-functional teams, bridging the gap between
+                web applications across retail, lending, and wealth management,
+                including platforms serving hundreds of thousands of customers.
+                I thrive in cross-functional teams, bridging the gap between
                 design and engineering with strong UI/UX fundamentals, semantic
                 HTML, and accessibility. Comfortable owning back-end work when a
                 feature calls for it. Proven ability to embed quickly into
@@ -329,50 +329,46 @@ export default function Home() {
               <ul className="list-disc ml-8">
                 <li>
                   <Typography level="caption">
+                    Translated rigorous Figma component specs into
+                    pixel-perfect, accessible, reusable React components,
+                    negotiating with designers during product shaping where more
+                    practical implementation alternatives existed.
+                  </Typography>
+                </li>
+                <li>
+                  <Typography level="caption">
+                    Shared ownership with one other front-end engineer of how
+                    the design system was structured in the codebase, including
+                    the mapping between code-level style variables and their
+                    Figma counterparts.
+                  </Typography>
+                </li>
+                <li>
+                  <Typography level="caption">
+                    Established software patterns for form handling and
+                    branching user flows, increasing flexibility, scalability,
+                    and maintainability across the product.
+                  </Typography>
+                </li>
+                <li>
+                  <Typography level="caption">
                     Built static marketing pages with content served from a
-                    headless CMS for an efficient and up-to-date user experience
-                    through the use of Incremental Static Regeneration.
+                    headless CMS, using Incremental Static Regeneration to keep
+                    content current without sacrificing performance.
                   </Typography>
                 </li>
                 <li>
                   <Typography level="caption">
-                    Improved software quality and stability by writing end to
-                    end tests and configuring a Bitbucket pipeline build step to
-                    run them.
+                    Wrote end-to-end Playwright tests and configured a Bitbucket
+                    pipeline build step to run them, improving release
+                    stability.
                   </Typography>
                 </li>
                 <li>
                   <Typography level="caption">
-                    Precisely translated designs into clean, accessible,
-                    agnostic React components that adhere to a strict component
-                    composition spec, resulting in a consistent user interface.
-                  </Typography>
-                </li>
-                <li>
-                  <Typography level="caption">
-                    Established software patterns that increased flexibility,
-                    scalability, and maintainability, such as form handling and
-                    branching user flows.
-                  </Typography>
-                </li>
-                <li>
-                  <Typography level="caption">
-                    Confer with designers to finalise features and address
-                    engineering considerations, resulting in a more user-centred
-                    product.
-                  </Typography>
-                </li>
-                <li>
-                  <Typography level="caption">
-                    Ensured data-driven decision making by developing A/B
-                    testing capabilities to assist with validating assumptions
-                    about user behaviour.
-                  </Typography>
-                </li>
-                <li>
-                  <Typography level="caption">
-                    Enhanced user insights by integrating analytics tools into
-                    the front-end.
+                    Built the front-end measurement layer — Mixpanel event
+                    tracking, FullStory session replay, and bespoke A/B testing
+                    capability to validate assumptions about user behaviour.
                   </Typography>
                 </li>
               </ul>
@@ -390,23 +386,21 @@ export default function Home() {
               <ul className="list-disc ml-8">
                 <li>
                   <Typography level="caption">
-                    Transformed designs into functional React components. Set up
-                    pages with SSR to ensure fluid user experience with flows,
-                    forms and other functional elements.
+                    Worked on the React front end, using server-side rendering
+                    for multi-step flows and forms.
                   </Typography>
                 </li>
                 <li>
                   <Typography level="caption">
-                    Designed and built database schemas, API routes, and
-                    resolvers.
+                    Worked across the back end, building API routes and GraphQL
+                    resolvers against existing database schemas.
                   </Typography>
                 </li>
                 <li>
                   <Typography level="caption">
-                    Improved team productivity by leading sprint planning, story
-                    pointing, elaborating work and scoping MVP for new features,
-                    resulting in a more organised and focused development
-                    process.
+                    Shared responsibility for sprint planning, story pointing,
+                    work elaboration, and MVP scoping in a small team with no
+                    dedicated product role.
                   </Typography>
                 </li>
               </ul>
@@ -427,38 +421,26 @@ export default function Home() {
               <ul className="list-disc ml-8">
                 <li>
                   <Typography level="caption">
-                    Workshop with client to scope and build a functional web
-                    portal for truck drivers to manage shipping data, including
-                    complex forms, file upload/download, CRUD operations,
-                    authentication and user permissions.
+                    Workshopped directly with the client to scope and build a
+                    web portal for truck drivers to manage shipping data,
+                    covering complex forms, file upload/download, CRUD
+                    operations, authentication, and user permissions.
                   </Typography>
                 </li>
                 <li>
                   <Typography level="caption">
-                    Design, develop, and deploy automation solutions targeting
-                    large-scale ERP software applications. Example: Zespri
-                    shipping updates bot - UiPath, Orchestrator. Fully
-                    autonomous procedure which scraped data from external
-                    carrier websites, and entered data into SAP.
+                    Designed, built, and deployed automation solutions against
+                    large-scale ERP systems, including a fully autonomous UiPath
+                    bot for Zespri that scraped external carrier websites and
+                    entered shipping updates into SAP. Worked in secure
+                    government environments handling sensitive payroll and
+                    medical data.
                   </Typography>
                 </li>
                 <li>
                   <Typography level="caption">
-                    Worked with government agencies in secure environments and
-                    with sensitive data including payroll and medical.
-                  </Typography>
-                </li>
-                <li>
-                  <Typography level="caption">
-                    Business process re-engineering: Document current business
-                    process, extract underlying requirements, assess for
-                    improvement opportunities, and present to client.
-                  </Typography>
-                </li>
-                <li>
-                  <Typography level="caption">
-                    Conducting technical interviews, candidate selection, and
-                    training of junior staff.
+                    Conducted technical interviews and candidate selection, and
+                    trained junior staff.
                   </Typography>
                 </li>
               </ul>
