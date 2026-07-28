@@ -151,41 +151,18 @@ export default function Home() {
               <ul className="list-disc ml-8">
                 <li>
                   <Typography level="caption">
-                    Provide critical engineering support for a large supermarket
-                    chain's membership platform launch, facilitating 500,000+
-                    customer signups within the first two weeks. Ship urgent
-                    production fixes and rapidly implement changes to meet
-                    unforeseen requirements under intense, high-traffic launch
-                    conditions.
+                    Provide engineering support for a large supermarket chain's
+                    membership platform launch, facilitating 500,000+ customer
+                    signups within the first two weeks. Ship urgent production
+                    fixes and rapidly implement changes to meet unforeseen
+                    requirements under intense, high-traffic launch conditions.
                   </Typography>
                 </li>
                 <li>
                   <Typography level="caption">
-                    Eager contributor to research and evaluation of agentic
-                    engineering workflows, presenting comparative analysis of
-                    competing approaches to the wider agency as we prepare to
-                    adopt them into client projects.
-                  </Typography>
-                </li>
-                <li>
-                  <Typography level="caption">
-                    Improve checkout experience for large supermarket eCommerce
-                    platforms serving tens of thousands of customers daily.
-                  </Typography>
-                </li>
-                <li>
-                  <Typography level="caption">
-                    Collaborate closely with designers and product owners to
-                    refine features, and actively contribute to sprint and
-                    quarterly planning to ensure work is well defined,
-                    appropriately scoped, and aligned with delivery timelines.
-                  </Typography>
-                </li>
-                <li>
-                  <Typography level="caption">
-                    Partner with back-end engineers during technical planning to
-                    design API contracts and map front-end/back-end
-                    interactions, ensuring alignment before implementation.
+                    Embed as the sole AKQA engineer within an established
+                    in-client squad, quickly building trust and becoming a key
+                    contributor in team ceremonies and technical decisions.
                   </Typography>
                 </li>
                 <li>
@@ -199,31 +176,38 @@ export default function Home() {
                 <li>
                   <Typography level="caption">
                     Drive alignment across QA discipline by advocating for a
-                    streamlined testing strategy, reducing fragile end-to-end
-                    tests that blocked deployments and refocusing efforts on
+                    streamlined testing strategy, reducing fragile Playwright
+                    suites that blocked deployments and refocusing efforts on
                     meaningful happy-path coverage.
                   </Typography>
                 </li>
                 <li>
                   <Typography level="caption">
-                    Champion continuous refactoring of tightly-coupled checkout
-                    components, extracting reusable UI components and utility
-                    functions to improve maintainability and reduce cost of
-                    change for future feature work.
+                    Research and evaluate agentic engineering workflows,
+                    presenting comparative analysis of competing approaches to
+                    the wider agency ahead of adoption on client projects.
+                  </Typography>
+                </li>
+                <li>
+                  <Typography level="caption">
+                    Champion continuous refactoring of tightly-coupled
+                    components in a checkout serving tens of thousands of
+                    customers daily, extracting reusable UI and utilities to
+                    reduce cost of change.
                   </Typography>
                 </li>
                 <li>
                   <Typography level="caption">
                     Identify and remediate critical accessibility failures
-                    across eCommerce sites during downtime, including unusable
-                    navigation and missing skip-to-content links.
+                    across eCommerce sites, including unusable navigation and
+                    missing skip-to-content links.
                   </Typography>
                 </li>
                 <li>
                   <Typography level="caption">
-                    Embed as the sole AKQA engineer within an established
-                    in-client squad, quickly building trust and becoming a key
-                    contributor in team ceremonies and technical decisions.
+                    Partner with back-end engineers during technical planning to
+                    design API contracts and map front-end/back-end
+                    interactions, ensuring alignment before implementation.
                   </Typography>
                 </li>
               </ul>
