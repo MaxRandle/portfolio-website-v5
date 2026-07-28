@@ -214,42 +214,41 @@ export default function Home() {
 
               <Divider />
 
-              <Heading level="h3">Back end freelance project</Heading>
+              <Heading level="h3">Back End Engineer (Freelance)</Heading>
               <Typography>
                 <strong>GuChat</strong> • Remote • August 2024 - February 2025
               </Typography>
-              <Typography>TypeScript | Node | Express</Typography>
+              <Typography>TypeScript | Node | Express | OpenAPI</Typography>
 
               <ul className="list-disc ml-8">
                 <li>
                   <Typography level="caption">
-                    Design and build ultra low latency public facing api for
-                    gamified telegram applet.
+                    Sole engineer on a public-facing API for a gamified Telegram
+                    applet, keeping the service small and decoupled from
+                    surrounding systems to hold a sub 100ms response time.
                   </Typography>
                 </li>
                 <li>
                   <Typography level="caption">
-                    Create and manage comprehensive developer guide and API
-                    documentation including self-validating OpenAPI spec with
+                    Generated a self-validating OpenAPI spec directly from the
+                    API source code so it was always guaranteed to match the
+                    implementation, maintained alongside a developer guide with
                     embedded examples.
                   </Typography>
                 </li>
                 <li>
                   <Typography level="caption">
-                    Upskill engineering team by introducing modern type safety
-                    and code generation techniques.
+                    Established end-to-end type safety by having the applet
+                    generate its client types from that spec, upskilling a
+                    separate contractor team on the code generation techniques
+                    involved.
                   </Typography>
                 </li>
                 <li>
                   <Typography level="caption">
-                    Understand client ecosystem and goals in order to elicit
-                    true requirements directly from client.
-                  </Typography>
-                </li>
-                <li>
-                  <Typography level="caption">
-                    Give technical presentations to assist client with choosing
-                    the best approach.
+                    Worked directly with the client to translate business goals
+                    into technical requirements, presenting options and
+                    trade-offs to support decisions on approach.
                   </Typography>
                 </li>
               </ul>
