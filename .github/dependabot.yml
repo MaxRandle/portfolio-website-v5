@@ -7,33 +7,47 @@ updates:
     directory: "/"
     schedule:
       interval: "weekly"
+    groups:
+      all-actions:
+        patterns:
+          - "*"
 
   # Maintain dependencies for npm
   - package-ecosystem: "npm"
     directory: "/"
     schedule:
-      interval: "daily"
-    open-pull-requests-limit: 50
+      interval: "weekly"
+    open-pull-requests-limit: 10
     ignore:
       - dependency-name: "*"
         update-types: ["version-update:semver-patch"]
     groups:
+      # all minor/patch updates land in a single PR
+      all-dependencies:
+        patterns:
+          - "*"
+        update-types: ["minor", "patch"]
+      # major updates for packages that must move together
       react:
         patterns:
           - "react"
           - "react-dom"
           - "@types/react"
           - "@types/react-dom"
+        update-types: ["major"]
       next:
         patterns:
           - "next"
           - "eslint-config-next"
           - "@next/mdx"
+        update-types: ["major"]
       turbo:
         patterns:
           - "turbo"
           - "@turbo/gen"
           - "eslint-config-turbo"
+        update-types: ["major"]
       mdx-js:
         patterns:
           - "@mdx-js/*"
+        update-types: ["major"]
