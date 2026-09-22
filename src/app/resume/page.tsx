@@ -151,11 +151,12 @@ export default function Home() {
               <ul className="list-disc ml-8">
                 <li>
                   <Typography level="caption">
-                    Provide engineering support for a large supermarket chain's
-                    membership platform launch, facilitating 500,000+ customer
-                    signups within the first two weeks. Ship urgent production
-                    fixes and rapidly implement changes to meet unforeseen
-                    requirements under intense, high-traffic launch conditions.
+                    Provide engineering support for a large supermarket
+                    chain&apos;s membership platform launch, facilitating
+                    500,000+ customer signups within the first two weeks. Ship
+                    urgent production fixes and rapidly implement changes to
+                    meet unforeseen requirements under intense, high-traffic
+                    launch conditions.
                   </Typography>
                 </li>
                 <li>
